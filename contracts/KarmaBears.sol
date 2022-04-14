@@ -80,8 +80,7 @@ contract KarmaBears is ERC721A, Ownable {
         view
         virtual
         override
-        returns (string memory)
-    {
+        returns (string memory){
         require(
             _exists(tokenId),
             "ERC721Metadata: URI query for nonexistent token"

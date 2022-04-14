@@ -1,0 +1,42 @@
+.member{
+    position: absolute;
+}
+
+.diagonal {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skew {
+    width: 200px;
+    /* height: 300px; */
+    transform: skewX(4deg);
+    border: 4px solid #355651;
+}
+
+.member-image {
+    width: 87%;   
+    /* border-bottom: 0px; */
+    height: 11  0%;
+}
+
+.info-sec {
+    width: 192px;
+    /* height: 50px; */
+    position: absolute;  
+    /* top: 0px; */
+    bottom: 1px;
+    /* left: 10px; */
+    background-color: #050713;
+    opacity: 0.8;
+    
+    /* width: 200px; */
+}
+
+.text {
+    transform: skewX(-10deg);
+    color:white
+}
+  

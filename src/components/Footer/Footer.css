@@ -1,0 +1,41 @@
+#footer {
+    background-color: #050713;
+}
+
+.footer-heading {
+    font-size: 20px;
+    color: #355651;
+}
+
+.quick-links li{
+    padding-bottom: 20px;
+}
+
+.newsletter-text {
+    font-size: 13px;
+}
+
+.form-sec{
+    margin-top: 30px;
+}
+
+.form-input {
+    background-color:#050713 ;
+    border: 1px solid white;
+    /* position: absolute; */
+    color: white;
+}
+
+.form-input:focus{
+    background-color:#050713 ;
+    color: white;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: -30px;
+}
+
+.start-sec {
+    margin-top: 10px;
+}

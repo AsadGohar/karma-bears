@@ -1,0 +1,31 @@
+#about {
+    background-color: #050713;
+}
+
+.about-text{
+    font-size: 24px;
+    text-align: left;
+}
+
+.what-text{
+    position: absolute;
+    color: white;
+    top: 715px;
+    left: 550px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.karma-text {
+    color: #355651;
+}
+
+.bear{
+    position: absolute;
+    right: 50px;
+}
+
+.world-img {
+    width: 400px;
+    height: 350px;
+}

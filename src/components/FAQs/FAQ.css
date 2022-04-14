@@ -1,0 +1,17 @@
+#faq {
+    background-color: #020C16;
+    height: 500px;
+}
+
+.faq-text {
+    position: absolute;
+    color: white;
+    top: 1210px;
+    left: 640px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.faq-sec {
+    padding: 0px 150px 150px 150px;
+}

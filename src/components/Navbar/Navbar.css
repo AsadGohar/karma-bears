@@ -1,0 +1,11 @@
+#nav .bg {
+    background-color: #03050D;
+}
+
+li a {
+    color: #FFFFFF !important;
+}
+
+li:hover {
+    cursor: pointer;
+}
