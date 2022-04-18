@@ -1,0 +1,20 @@
+#roadmap {
+    background-color: #020C16;
+    height: 100px;
+    padding: 60px 0 20px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
+    margin-bottom: -3vw;
+}
+
+@media (max-width:550px) {
+    #roadmap {
+        height: 2200px;
+    }
+}
+
+@media (min-width:550px) and (max-width:768px) {
+    #roadmap {
+        height: 800px;
+    }
+}
+

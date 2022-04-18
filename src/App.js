@@ -9,6 +9,7 @@ import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import FAQ from './components/FAQs/FAQ';
 import OurTeam from './components/OurTeam/OurTeam';
+import Timeline from './components/Timeline/Timeline';
 
 
 function App() {
@@ -48,12 +49,13 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div >
       <Navbar/>
       <Home/>
       <About/>
-      <FAQ/>
+      <Timeline/>
       <OurTeam/>
+      <FAQ/>
       <Footer/>
       {/* <div className='container'>
         <div className='row row-margin-0'>

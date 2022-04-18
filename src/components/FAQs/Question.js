@@ -3,12 +3,30 @@ import './Question.css'
 
 export const Question = ({id,question}) => {
   const [isActive,setIsActive] = React.useState(false)
+
+  let activeHeading = "accordion-button collapsed question-heading text-white"
+  let unactiveHeading = "accordion-button collapsed question-heading"
+
+  let activeBody = "accordion-body question-body text-white"
+  let unactiveBody = "accordion-body question-body"
+
   return (
     <div className="accordion accordion-flush pt-4">
-      <div className="accordion-item">
+      <div class="accordion accordion-flush" id="product-filter-accordion">
+        <div id="product-filter-sidebar-manufacturers" class="product-filter-sidebar widget-area accordion-item" role="complementary">
+          <h3 id="heading-manufacturers" class="accordion-header">
+            <button data-bs-toggle="collapse" data-bs-target={`#collapse${id}`} aria-controls="collapse-manufacturers" 
+            aria-expanded="false" class={isActive ? activeHeading : unactiveHeading} onClick={e=>setIsActive(!isActive)} type="button">{question}</button>
+          </h3>
+          <div id={`collapse${id}`} aria-labelledby="heading-manufacturers" data-bs-parent="#product-filter-accordion" class="accordion-collapse collapse">
+            <div class={isActive ? activeBody : unactiveBody }>You no more have to click twice to see the accordion body content :)</div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="accordion-item">
         <h2 className="accordion-header" id="headingOne">
-          <button className="accordion-button question-heading collapsed" type="button" data-bs-toggle="collapse" 
-            data-bs-target={`#collapse${id}`} aria-expanded="false" aria-controls="collapseOne">
+          <button className="accordion-button question-heading" type="button" data-bs-toggle="collapse" 
+            data-bs-target={`#collapse${id}`} aria-expanded="true" aria-controls="collapseOne">
             {question}
           </button>
         </h2>
@@ -23,7 +41,7 @@ export const Question = ({id,question}) => {
             though the transition does limit overflow.
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

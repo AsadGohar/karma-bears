@@ -15,19 +15,19 @@ const Navbar = () => {
             <div className="collapse navbar-collapse">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item pr-4 active">
-                        <a className="nav-link" href="x">HOME<span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#home">HOME<span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="x">ABOUT</a>
+                        <a className="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="x">ROADMAP</a>
+                        <a className="nav-link" href="#roadmap">ROADMAP</a>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="x">TEAM</a>
+                        <a className="nav-link" href="#team">TEAM</a>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="x">FAQs</a>
+                        <a className="nav-link" href="#faq">FAQs</a>
                     </li>
                 </ul>
                 <ul className='my-lg-0 navbar-nav pr-4 ml-auto'>

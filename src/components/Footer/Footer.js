@@ -5,12 +5,11 @@ import './Footer.css'
 const Footer = () => {
   return (
     <footer id='footer' className="page-footer font-small blue pt-4">
-        <div className="container-fluid text-center text-md-left">
+        <div className="container-fluid row-margin-0 text-center text-md-left">
             <div className="row row-margin-0">
                 <div className="col-md-5 mt-md-0 mt-3">
-                    <img src={'../assets/karma-white-logo.png'} />
+                    <img src={'../assets/karma-white-logo.png'} alt='logo' />
                 </div>
-                <hr className="clearfix w-100 d-md-none pb-3"/>
                 <div className="col-md-3 mb-md-0 mb-3">
                     <p className="footer-heading">Quick Links</p>
                     <ul className="list-unstyled quick-links">
@@ -37,7 +36,7 @@ const Footer = () => {
                         Signup for our newsletter to get the latest news in your inbox. 
                         Your email is safe with us. We don't spam.
                     </p>
-                    <div className="d-flex justify-content-center align-items-center form-sec">
+                    <div className="d-flex justify-content-center align-items-center form-sec mr-2">
                         <input className="form-input form-control"  min='0' type="email"/>
                         <ArrowIcon className='arrow-icon'/>
                     </div>

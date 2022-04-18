@@ -1,5 +1,12 @@
 #about {
+    height: auto;
     background-color: #050713;
+    padding-bottom: 50px;
+    background-image: url('../../assets/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
+    margin-bottom: -3vw;
 }
 
 .about-text{
@@ -21,11 +28,22 @@
 }
 
 .bear{
-    position: absolute;
+    /* position: absolute; */
     right: 50px;
 }
 
 .world-img {
     width: 400px;
     height: 350px;
+}
+
+@media (max-width: 440px) {
+    .world-img {
+        width: 300px;
+        height: 270px;
+    }
+    .about-text{
+        font-size: 18px;
+        text-align: center;
+    }
 }
