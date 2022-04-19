@@ -21,10 +21,16 @@ const OurTeam = () => {
                   <h5 className="card-title mb-1 text text-white">Chad Wagner</h5>
                   <p className=" text mb-2 text-white">CG Artist</p>
                 </div>
-                <div className="d-flex icon-sec justify-content-around pb-2">
-                  <FbIcon/>
-                  <IgIcon/>
-                  <TwitterIcon/>
+                <div className="d-flex icon-sec justify-content-center pb-2">
+                  <div>
+                    <FbIcon className='ml-3'/>
+                  </div>
+                  <div>
+                    <IgIcon className='ml-3'/>  
+                  </div>
+                  <div>
+                    <TwitterIcon className='ml-3'/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -34,34 +40,42 @@ const OurTeam = () => {
               <img className="card-img-top" src={'./assets/mem-2.png'} alt="Card cap2"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
-                  <h5 className="card-title mb-1 text text-white">Chad Wagner</h5>
-                  <p className=" text mb-2 text-white">CG Artist</p>
+                  <h5 className="card-title mb-1 text text-white">Larry Young</h5>
+                  <p className=" text mb-2 text-white">UI Designer</p>
                 </div>
-                <div className="d-flex icon-sec justify-content-around pb-2">
-                  <FbIcon/>
-                  <IgIcon/>
-                  <TwitterIcon/>
+                <div className="d-flex icon-sec justify-content-center pb-2">
+                <div>
+                    <FbIcon className='ml-3'/>
+                  </div>
+                  <div>
+                    <IgIcon className='ml-3'/>  
+                  </div>
+                  <div>
+                    <TwitterIcon className='ml-3'/>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="member3 box-shadow-container">
-            <div className="px-0"  >
-              <img className="card-img-top" src={'./assets/mem-3.png'} alt="Card cap3"/>
-              <div className='info-sec'>
-                <div className="card-body pb-0 pt-1 member-details-sec">
-                  <h5 className="card-title mb-1 text text-white">Chad Wagner</h5>
-                  <p className=" text mb-2 text-white">CG Artist</p>
-                </div>
-                <div className="d-flex justify-content-center pb-2">
-                  <div className='mr-2'>
-                    <FbIcon/>
+          <div className="box-shadow-container-3">
+            <div className="member3">
+              <div className="px-0"  >
+                <img className="card-img-top" src={'./assets/mem-3.png'} alt="Card cap3"/>
+                <div className='info-sec'>
+                  <div className="card-body pb-0 pt-1 member-details-sec">
+                    <h5 className="card-title mb-1 text-center text-white">Johnny Cunningham</h5>
+                    <p className=" text mb-2 text-white">CEO</p>
                   </div>
-                  <div className='mr-2'>
-                    <IgIcon/>
-                  </div>
-                  <div className='mr-2'>
-                    <TwitterIcon/>
+                  <div className="d-flex justify-content-center pb-2">
+                    <div className='mr-2'>
+                      <FbIcon/>
+                    </div>
+                    <div className='mr-2'>
+                      <IgIcon/>
+                    </div>
+                    <div className='mr-2'>
+                      <TwitterIcon/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -72,13 +86,19 @@ const OurTeam = () => {
               <img className="card-img-top" src={'./assets/mem-4.png'} alt="Card cap4"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
-                  <h5 className="card-title mb-1 text-l text-white">Chad Wagner</h5>
-                  <p className=" text-l mb-2 text-white">CG Artist</p>
+                  <h5 className="card-title mb-1 text-center text-l text-white">Joan Williamson</h5>
+                  <p className=" text-l mb-2 text-white">CTO</p>
                 </div>
-                <div className="d-flex icon-sec justify-content-around pb-2">
-                  <FbIcon/>
-                  <IgIcon/>
-                  <TwitterIcon/>
+                <div className="d-flex icon-sec justify-content-center pb-2">
+                  <div>
+                    <FbIcon className='ml-3'/>
+                  </div>
+                  <div>
+                    <IgIcon className='ml-3'/>  
+                  </div>
+                  <div>
+                    <TwitterIcon className='ml-3'/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,13 +108,19 @@ const OurTeam = () => {
               <img className="card-img-top" src={'./assets/mem-5.png'} alt="Card cap5"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
-                  <h5 className="card-title mb-1 text-l text-white">Chad Wagner</h5>
-                  <p className=" text-l mb-2 text-white">CG Artist</p>
+                  <h5 className="card-title mb-1 text-l text-white">Eugene Young</h5>
+                  <p className=" text-l mb-2 text-white">Maketing Manager</p>
                 </div>
-                <div className="icon-sec d-flex justify-content-around pb-2">
-                  <FbIcon/>
-                  <IgIcon/>
-                  <TwitterIcon/>
+                <div className="icon-sec d-flex justify-content-center pb-2">
+                  <div>
+                    <FbIcon className='ml-3'/>
+                  </div>
+                  <div>
+                    <IgIcon className='ml-3'/>  
+                  </div>
+                  <div>
+                    <TwitterIcon className='ml-3'/>
+                  </div>
                 </div>
               </div>
             </div>

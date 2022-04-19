@@ -7,7 +7,7 @@ import './Timeline.css'
 const Timeline = () => {
 
   const isMobile = useMediaQuery({
-    query: '(max-width: 550px)'
+    query: '(max-width: 650px)'
   })
 
   return (
@@ -16,14 +16,16 @@ const Timeline = () => {
         <img alt='headind' src={'../assets/roadmap-heading.png'} />
         <p className='our-team-text'>Road<span className='karma-text' >Map</span></p>
       </div>
-      {
-        isMobile ? 
-        <div >
-          <TimelineImgMobile className='px-2'/>  
-        </div> :
-        
-        <img className='img-fluid' alt='timeline' src={'./assets/timeline.png'} />
-      } 
+      <div className='container'>
+        {
+          isMobile ? 
+          <div >
+            <TimelineImgMobile className='px-2'/>  
+          </div> :
+          
+          <img className='img-fluid' alt='timeline' src={'./assets/timeline.png'} />
+        }
+      </div> 
     </div>
   )
 }

@@ -1,8 +1,9 @@
 #faq {
     background-color: #020C16;
-    height: 765px;
+    height: 850px;
     padding-top: 70px;
     margin-bottom: -10vh;
+    /* margin-bottom: -5vw; */
     /* margin-top: 30px; */
 }
 
@@ -17,6 +18,13 @@
 
 .faq-sec {
     padding: 0px 150px 150px 150px;
+}
+
+.subtext {
+    /* width: 500px; */
+    margin: auto;
+    text-align: center;
+    color: #848484;
 }
 
 @media (max-width: 640px) {

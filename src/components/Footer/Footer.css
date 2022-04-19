@@ -3,7 +3,7 @@
     padding-top: 30px;
     clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
     /* clip-path: polygon(0 0, 100%  0, 100% 100%, 0 calc(100%-3vw)) */
-    margin-top: -5vw;
+    margin-top: -20vw;
 }
 
 .footer-heading {
@@ -42,6 +42,17 @@
 
 .start-sec {
     margin-top: 10px;
+}
+
+.logo-sec-text {
+    max-width: 350px;
+}
+
+hr{
+    color: #FFFFFF;
+    margin: auto;
+    width: 50%;
+    border: 1px solid #FFFFFF;
 }
 
 @media (max-width: 550px) { 

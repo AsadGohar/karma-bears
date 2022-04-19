@@ -12,8 +12,8 @@ const About = () => {
             {/* <p className='what-text'>What is <span className='karma-text'>Karma Bear</span> ?</p> */}
             <Bear className='p-2 bear'/>
         </div>
-        <div className='row row-margin-0 px-4 ml-4 pt-4' >
-            <div className=' col d-flex justify-content-center flex-column  text-white about-text'>
+        <div className='row row-margin-0 px-4 ml-4 pt-4  d-flex justify-content-around align-items-center'  >
+            <div className='col d-flex justify-content-center flex-column text-white about-text'>
                 <p>KARMA BEAR is a collection of 10,000, 
                 1080x1920, computer generated art.
                 </p>
@@ -25,9 +25,8 @@ const About = () => {
                     locations no other Karma Bear possesses.
                 </p>
             </div>
-            <div className='col'>
-                <img alt='world' className='world-img' src={'../assets/about-world.png'} />
-            </div>
+
+                <img alt='world' className='world-img' src={'../assets/about-world-1.png'} />
         </div>
     </div>
   )

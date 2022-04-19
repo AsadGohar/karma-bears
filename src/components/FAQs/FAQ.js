@@ -10,6 +10,11 @@ const FAQ = () => {
             <img src={'../assets/faq-heading.png'} alt='heading' />
             <p className='faq-text'>FAQs</p>
         </div>
+        <p className='subtext my-4'>
+        Nec vehicula sapien tincidunt dictum ante etiam, 
+        faucibus  semper, placerat risus ultricies sodales facilisis. Nec vehicula sapien 
+        tincidunt dictum ante etiam.
+        </p>
         <div className='faq-sec' >
             <Question id='One' question={'How Are You ?'}/>
             <Question id='Two' question={'How Are You ?'}/>
