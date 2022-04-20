@@ -1,0 +1,33 @@
+#admin {
+    height: 700px;
+    background-color: #020C16;
+}
+
+.btns {
+    background-color: #355651;
+    color: white;
+}
+
+.input-bg {
+    background-color: #020C16;
+    color: white;
+}
+
+.input-bg:focus {
+    background-color: #020C16;
+    color: white;
+}
+
+.mint-user {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0px !important;
+    padding-top: 7px;
+    /* color: #3E4446; */
+    border: 2px dashed #3E4446;
+}
+
+.select-bg {
+    background-color:#020C16 ;
+    color: white;
+}

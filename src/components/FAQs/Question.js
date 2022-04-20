@@ -2,13 +2,10 @@ import React from 'react'
 import './Question.css'
 
 export const Question = ({id,question}) => {
-  const [isActive,setIsActive] = React.useState(false)
 
+  const [isActive,setIsActive] = React.useState(false)
   let activeHeading = "accordion-button collapsed  question-heading text-white"
   let unactiveHeading = "accordion-button collapsed  question-heading"
-
-  let activeBody = "accordion-collapse collapse  question-body text-white show"
-  let unactiveBody = "ccordion-collapse collapse  question-body"
 
   return (
     <div className="container">
@@ -30,7 +27,7 @@ export const Question = ({id,question}) => {
           </h2>
           <div
             id={`collapse${id}`}
-            // class={isActive ? activeBody : unactiveBody }
+            // className={isActive ? activeBody : unactiveBody }
             className="accordion-collapse collapse  question-body"
             aria-labelledby="heading-manufacturers"
             data-bs-parent="#accordionExample"
