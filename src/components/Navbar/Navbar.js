@@ -7,8 +7,9 @@ import detectEthereumProvider from '@metamask/detect-provider'
 import { toast } from 'react-toastify';
 import { useDispatch,useSelector } from 'react-redux'
 import { USER_LOGIN } from '../../redux/userSlice'
+import { NavHashLink } from 'react-router-hash-link';
 import {
-  Link
+  NavLink
 } from "react-router-dom";
 
 import './Navbar.css'
@@ -76,27 +77,61 @@ const Navbar = () => {
             <a className="ml-4 navbar-brand" href="x">
                 <KarmaLogo/>
             </a>
+           
+            <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
+              data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
+            </button>
+
             <div className="collapse navbar-collapse">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item pr-4 active">
-                        <a className="nav-link" href="#home">HOME<span className="sr-only">(current)</span></a>
+                        <NavHashLink
+                          to="/#home"
+                          activeClassName="selected"
+                        >HOME</NavHashLink>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="#about">ABOUT</a>
+                        <NavHashLink
+                          to="/#about"
+                          activeClassName="selected"
+                        >ABOUT</NavHashLink>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="#roadmap">ROADMAP</a>
+                        <NavHashLink
+                          to="/#roadmap"
+                          activeClassName="selected"
+                        >ROADMAP</NavHashLink>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="#team">TEAM</a>
+                        <NavHashLink
+                          to="/#team"
+                          activeClassName="selected"
+                        >OUR TEAM</NavHashLink>
                     </li>
                     <li className="nav-item pr-4">
-                        <a className="nav-link" href="#faq">FAQs</a>
+                      <NavHashLink
+                        to="/#faq"
+                        activeClassName="selected"
+                      >FAQs</NavHashLink>
                     </li>
                     <li className="nav-item pr-4">
-											<Link  to="/admin" className="nav-link">
-												Admin
-											</Link>
+                      <NavLink
+                        to="/mint"
+                        activeClassName="selected"
+                      >MINT</NavLink>
+                    </li>
+                    <li className="nav-item pr-4">
+                      <NavLink
+                        to="/gallery"
+                        activeClassName="selected"
+                      >GALLERY</NavLink>
+                    </li>
+                    <li className="nav-item pr-4">
+                      <NavLink
+                        to="/admin"
+                        activeClassName="selected"
+                      >ADMIN</NavLink>
                     </li>
                 </ul>
                 <ul className='my-lg-0 navbar-nav pr-4 ml-auto'>
@@ -111,8 +146,8 @@ const Navbar = () => {
                     </li>
                     {
 											String(user).length > 0 ?
-											<h2 className="btn btn-primary mr-2" >Connected</h2>:
-											<button type="submit" onClick={loginWithMetaMask} className="btn btn-primary mr-2">Connect</button> 
+											<h2 className="btn mr-2 connect-btn" >Connected</h2>:
+											<button type="submit" onClick={loginWithMetaMask} className="btn connect-btn mr-2">Connect</button> 
 										}
                 </ul>
             </div>

@@ -14,6 +14,8 @@ import './App.css';
 import LandingPage from './components/LandingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar'
 import Admin from './components/Admin/Admin';
+import Mint from './components/Mint/Mint';
+import Gallery from './components/NFT Gallery/Gallery';
 
 function App() {
 
@@ -46,6 +48,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} exact />
           <Route path="/admin" element={<Admin />} exact />
+          <Route path="/mint" element={<Mint />} exact />
+          <Route path="/gallery" element={<Gallery />} exact />
         </Routes>
         <Footer/>
       </Router> 

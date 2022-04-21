@@ -1,0 +1,23 @@
+#mint {
+    background-color: #050710;
+    height: 700px;
+}
+
+.mint-opt {
+    width: 500px;
+    padding: 30px;
+    border: 2px dashed #3E4446;
+    border-radius: 5px;
+}
+
+.operator {
+    width: 50px;
+}
+
+.mint-btn {
+    width: 240px;
+}
+
+.account-heading-text {
+    color: #355651;
+}

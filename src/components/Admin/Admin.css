@@ -1,11 +1,12 @@
 #admin {
-    height: 700px;
+    height: 1000px;
     background-color: #020C16;
 }
 
 .btns {
     background-color: #355651;
     color: white;
+    width: 180px;
 }
 
 .input-bg {
@@ -30,4 +31,18 @@
 .select-bg {
     background-color:#020C16 ;
     color: white;
+}
+
+.withdraw-btn {
+    background-color: white;
+    color: black;
+    width: 180px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .right-sec {
+        margin-left: 22px;
+    }
 }
