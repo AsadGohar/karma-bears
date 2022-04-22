@@ -7,7 +7,7 @@ import './OurTeam.css'
 const OurTeam = () => {
   return (
   <div id='team'>
-    <div className='container' >
+    <div className='container mx-0' >
         <div className='d-flex justify-content-center'>
           <img alt='headind' src={'../assets/our-team-heading.png'} />
           <p className='our-team-text'>Our <span className='karma-text' >Team</span></p>

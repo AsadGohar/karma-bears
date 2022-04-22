@@ -41,8 +41,51 @@
     font-weight: 700;
 }
 
+.admin-mint-opt {
+    width: 300px;
+    padding: 30px;
+    border: 2px dashed #3E4446;
+    border-radius: 5px;
+}
+
+.operator {
+    width: 50px;
+}
+
+.admin-mint-btn {
+    width: 100px;
+}
+
+.account-heading-text {
+    color: #355651;
+}
+
+.admin-mint-hr {
+    color: #FFFFFF;
+    width: 90%;
+    border: 1px solid #FFFFFF;
+}
+
+.admin-mint-info {
+    font-size: 12px;
+}
+
+.mint-heading {
+    font-size: 22px;
+}
+
 @media (max-width: 767px) {
     .right-sec {
-        margin-left: 22px;
+        margin-left: 10px;
+    }
+
+    #admin {
+        height: 1300px;
+    }
+
+    .admin-mint-hr {
+        width: 90%;
     }
 }
+
+

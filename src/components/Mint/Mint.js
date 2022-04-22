@@ -22,7 +22,7 @@ const Mint = () => {
     }
 
   return (
-    <div id='mint' className='container-fluid'>
+    <div id='mint' className='container-fluid mx-0'>
         <h1 className="display-6 text-center text-white py-3">MINT YOUR NFTs</h1>
         <div className='d-flex justify-content-center'>
             <div className='d-flex flex-column mint-opt align-items-center'>

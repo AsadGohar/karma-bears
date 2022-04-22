@@ -8,7 +8,7 @@ export const Question = ({id,question}) => {
   let unactiveHeading = "accordion-button collapsed  question-heading"
 
   return (
-    <div className="container">
+    <div className="container mx-0">
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
