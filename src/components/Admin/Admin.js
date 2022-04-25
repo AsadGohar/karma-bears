@@ -1,7 +1,13 @@
 import React from 'react'
+import { contract,isPaused} from '../../utils/contractUtils'
 import './Admin.css'
 
 const Admin = () => {
+
+  React.useEffect(()=>{
+    console.log(isPaused())
+  },[])
+
   return (
     <div id='admin' className='container-fluid' >
       <h1 className="display-6 text-center text-white py-3">ADMIN</h1>

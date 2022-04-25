@@ -16,7 +16,7 @@ const Timeline = () => {
         <img alt='headind' src={'../assets/roadmap-heading.png'} />
         <p className='our-team-text'>Road<span className='karma-text' >Map</span></p>
       </div>
-      <div className='container mx-0'>
+      <div className='container'>
         {
           isMobile ? 
           <div >
