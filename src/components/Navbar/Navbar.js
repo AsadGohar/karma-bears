@@ -5,8 +5,6 @@ import { ReactComponent as InstagramIcon } from '../../assets/instagram-icon.svg
 import { ReactComponent as TwitterIcon } from '../../assets/twitter-icon.svg'
 import detectEthereumProvider from '@metamask/detect-provider'
 import { toast } from 'react-toastify';
-import { useDispatch,useSelector } from 'react-redux'
-import { USER_LOGIN } from '../../redux/userSlice'
 import { NavHashLink } from 'react-router-hash-link';
 import {
   NavLink
@@ -44,7 +42,7 @@ const Navbar = () => {
         // let signer = ethereum.getA
 
         let acc = await ethereum.request({ method: 'eth_requestAccounts' });
-        console.log(acc[0])
+        // console.log(acc[0])
         if(acc[0] == null) {
           ethereum.request({ method: 'eth_accounts' })
           .then((accounts)=>{
@@ -64,8 +62,7 @@ const Navbar = () => {
          	localStorage.setItem('user',JSON.stringify(address))
 					// dispatch(USER_LOGIN(address))
           let owner = await getOwner()
-          console.log(owner,'onersad')
-          (owner === address) ? setIsOwner(true) : setIsOwner(false)          
+          owner === address ? setIsOwner(true) : setIsOwner(false)          
           var shortAddress = address.substring(0,6)+'...'+address.substring(address.length-4,address.length);
           console.log(shortAddress)
           window.location.reload()
@@ -97,43 +94,37 @@ const Navbar = () => {
             <li className="nav-item pr-4 active">
               <NavHashLink
                 to="/#home"
-                activeClassName="selected"
               >HOME</NavHashLink>
             </li>
             <li className="nav-item pr-4">
               <NavHashLink
                 to="/#about"
-                activeClassName="selected"
               >ABOUT</NavHashLink>
             </li>
             <li className="nav-item pr-4">
               <NavHashLink
                 to="/#roadmap"
-                activeClassName="selected"
               >ROADMAP</NavHashLink>
             </li>
             <li className="nav-item pr-4">
               <NavHashLink
                 to="/#team"
-                activeClassName="selected"
               >OUR TEAM</NavHashLink>
             </li>
             <li className="nav-item pr-4">
               <NavHashLink
                 to="/#faq"
-                activeClassName="selected"
               >FAQs</NavHashLink>
             </li>
             <li className="nav-item pr-4">
               <NavLink
                 to="/mint"
-                activeClassName="selected"
               >MINT</NavLink>
             </li>
             <li className="nav-item pr-4">
               <NavLink
                 to="/gallery"
-                activeClassName="selected"
+                
               >GALLERY</NavLink>
             </li>
             {
