@@ -11,16 +11,23 @@ import { NavHashLink } from 'react-router-hash-link';
 import {
   NavLink
 } from "react-router-dom";
-
 import './Navbar.css'
+import { getAddress, getOwner } from '../../utils/contractUtils'
 
 const Navbar = () => {
 
-	let dispatch = useDispatch()
+  const [user,setUser] = React.useState('')
+  const [isOwner,setIsOwner] = React.useState(false)
 
-  let {user}  = useSelector(state=>state.user)
-	console.log(user,'user')
-	
+  React.useEffect(()=> {
+    getUser()
+  },[])
+  
+  const getUser = async () => {
+    setUser(await getAddress())
+    await getAddress() ===  await getOwner() ? setIsOwner(true) : setIsOwner(false)
+  }
+
   const loginWithMetaMask = async (e) => {
     console.log('here')
     e.preventDefault()
@@ -55,9 +62,13 @@ const Navbar = () => {
         if (acc[0] != null) {
           var address = acc[0];
          	localStorage.setItem('user',JSON.stringify(address))
-					dispatch(USER_LOGIN(address))
+					// dispatch(USER_LOGIN(address))
+          let owner = await getOwner()
+          console.log(owner,'onersad')
+          (owner === address) ? setIsOwner(true) : setIsOwner(false)          
           var shortAddress = address.substring(0,6)+'...'+address.substring(address.length-4,address.length);
           console.log(shortAddress)
+          window.location.reload()
         //   loginProviderRequest(address,shortAddress,setMetaMaskLoader)
         }
     } catch (error) {
@@ -66,92 +77,94 @@ const Navbar = () => {
     }
     } else {
       toast.error('Please Install MetaMask', {
-            position: toast.POSITION.TOP_LEFT
+          position: toast.POSITION.TOP_LEFT
         })
     }
   }
 
   return (
     <div id="nav">
-        <nav className="navbar navbar-expand-lg bg">
-            <a className="ml-4 navbar-brand" href="x">
-                <KarmaLogo/>
-            </a>
-           
-            <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
-              data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
-            </button>
+      <nav className="navbar navbar-expand-lg bg">
+        <a className="ml-4 navbar-brand" href="x">
+          <KarmaLogo/>
+        </a>
+        <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
+          data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
+        </button>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item pr-4 active">
+              <NavHashLink
+                to="/#home"
+                activeClassName="selected"
+              >HOME</NavHashLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavHashLink
+                to="/#about"
+                activeClassName="selected"
+              >ABOUT</NavHashLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavHashLink
+                to="/#roadmap"
+                activeClassName="selected"
+              >ROADMAP</NavHashLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavHashLink
+                to="/#team"
+                activeClassName="selected"
+              >OUR TEAM</NavHashLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavHashLink
+                to="/#faq"
+                activeClassName="selected"
+              >FAQs</NavHashLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavLink
+                to="/mint"
+                activeClassName="selected"
+              >MINT</NavLink>
+            </li>
+            <li className="nav-item pr-4">
+              <NavLink
+                to="/gallery"
+                activeClassName="selected"
+              >GALLERY</NavLink>
+            </li>
+            {
+              isOwner &&             
+              <li className="nav-item pr-4">
+                <NavLink
+                  to="/admin"
+                  activeClassName="selected"
+                >ADMIN</NavLink>
+              </li>
+            }
+          </ul>
+          <ul className='my-lg-0 navbar-nav pr-4 ml-auto align-items-center'>
+            <li className="nav-item pr-4">
+                <DiscordIcon/>
+            </li>
 
-            <div className="collapse navbar-collapse">
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item pr-4 active">
-                        <NavHashLink
-                          to="/#home"
-                          activeClassName="selected"
-                        >HOME</NavHashLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                        <NavHashLink
-                          to="/#about"
-                          activeClassName="selected"
-                        >ABOUT</NavHashLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                        <NavHashLink
-                          to="/#roadmap"
-                          activeClassName="selected"
-                        >ROADMAP</NavHashLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                        <NavHashLink
-                          to="/#team"
-                          activeClassName="selected"
-                        >OUR TEAM</NavHashLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                      <NavHashLink
-                        to="/#faq"
-                        activeClassName="selected"
-                      >FAQs</NavHashLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                      <NavLink
-                        to="/mint"
-                        activeClassName="selected"
-                      >MINT</NavLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                      <NavLink
-                        to="/gallery"
-                        activeClassName="selected"
-                      >GALLERY</NavLink>
-                    </li>
-                    <li className="nav-item pr-4">
-                      <NavLink
-                        to="/admin"
-                        activeClassName="selected"
-                      >ADMIN</NavLink>
-                    </li>
-                </ul>
-                <ul className='my-lg-0 navbar-nav pr-4 ml-auto'>
-                    <li className="nav-item pr-4">
-                        <DiscordIcon/>
-                    </li>
-                    <li className="nav-item pr-4">
-                        <InstagramIcon/>
-                    </li>
-                    <li className="nav-item pr-4">
-                        <TwitterIcon/>
-                    </li>
-                    {
-											String(user).length > 0 ?
-											<h2 className="btn mr-2 connect-btn" >Connected</h2>:
-											<button type="submit" onClick={loginWithMetaMask} className="btn connect-btn mr-2">Connect</button> 
-										}
-                </ul>
-            </div>
-        </nav>
+            <li className="nav-item pr-4">
+                <InstagramIcon/>
+            </li>
+            <li className="nav-item pr-4">
+                <TwitterIcon/>
+            </li>
+            {
+              user.length > 0  ?
+              <h2 className="btn mr-2 connect-btn  mb-0" >Connected</h2>  :
+              <button type="submit" onClick={loginWithMetaMask} className="btn connect-btn mr-2">Connect</button> 
+            }
+          </ul>
+        </div>
+      </nav>
     </div>
   )
 }

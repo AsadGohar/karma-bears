@@ -3,16 +3,19 @@ import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import Web3 from 'web3';
 import KarmaBear from '../../artifacts/KarmaBears.json'
-
+import { getAddress } from '../../utils/contractUtils';
 import './Mint.css'
 
 const Mint = () => {
     
     const [mint,setMint] = React.useState(0)
+    const [user,setUser] = React.useState('')
+
 
     let web3 = new Web3(Web3.givenProvider || 'https://rinkeby.infura.io/v3/8f7bb415bf7b4dceb66c27ceea3bfb64','web3');
     
-   React.useEffect(()=>{
+    React.useEffect(()=>{
+        getUser()
         const getNetwork = async () => {
             let network = await web3.eth.net.getId()
             console.log(network)
@@ -20,15 +23,14 @@ const Mint = () => {
         getNetwork()
     },[])
     
-    let {user}  = useSelector(state=>state.user)
+    const getUser = async (e) => {
+        setUser(await getAddress())
+    }
     // console.log(user)
    const mintNfts = async (e) => {
        e.preventDefault()
         let contract = new web3.eth.Contract(KarmaBear.output.abi,
             '0x369153A761d19bCa87881cD01AabD480c2ED5018')  
-
-        var BN = web3.utils.BN;
-
         await contract.methods.publicSaleMint(mint).send({from: String(user), value: web3.utils.toWei('0.016', 'ether')},(err)=>{
             if(err !=undefined){
                 console.log(err,'err')
@@ -59,7 +61,7 @@ const Mint = () => {
                 String(user).length > 0 ?  
                 <div>
                     <h3 className='text-center account-heading-text'>Account Address</h3>
-                    <p className='text-white text-center '>0x241534t61346y3451714</p>
+                    <p className='text-white text-center '>{user}</p>
                     <div className='d-flex justify-content-center pt-4'>
                         <button type="button" onClick ={e=>increaseMint(e)} className="btn btn-outline-primary mr-2 operator">+</button>
                         <button type="button" onClick={e=>mintNfts(e)} className="btn btn-outline-primary mint-btn">Mint</button>

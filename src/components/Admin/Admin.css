@@ -3,10 +3,41 @@
     background-color: #020C16;
 }
 
+.admin-heading {
+    font-size: 26px !important;
+}
+
+.total-minted-value {
+    font-family: 12px !important;
+    font-weight: 100 !important;
+}
+
+.data-heading {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.refresh-icon:hover {
+    cursor: pointer;
+}
+
+.static-data {
+    margin-bottom: 5px !important;
+}
+
 .btns {
+    border: 0;
     background-color: #355651;
     color: white;
     width: 180px;
+}
+
+.refresh-btn {
+    font-size: 17px;
+    font-weight: 700;
+    background-color: chocolate;
+    width: 180px;
+    color: black;
 }
 
 .input-bg {
