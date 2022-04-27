@@ -139,14 +139,31 @@ const Navbar = () => {
           </ul>
           <ul className='my-lg-0 navbar-nav pr-4 ml-auto align-items-center'>
             <li className="nav-item pr-4">
+              <a target="_blank" 
+              href="https://discord.gg/rFYBKgwgpn" 
+              className=""
+              rel="noreferrer"
+              >
                 <DiscordIcon/>
+              </a>
             </li>
-
             <li className="nav-item pr-4">
+              <a target="_blank" 
+              href="https://www.instagram.com/karmabearnft/" 
+              className=""
+              rel="noreferrer"
+              >
                 <InstagramIcon/>
+              </a>
             </li>
             <li className="nav-item pr-4">
+              <a target="_blank" 
+              href="https://twitter.com/karmabearnft/" 
+              className=""
+              rel="noreferrer"
+              >
                 <TwitterIcon/>
+              </a>
             </li>
             {
               user.length > 0  ?

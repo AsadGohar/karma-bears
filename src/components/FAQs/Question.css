@@ -1,13 +1,20 @@
  @import url("https://use.fontawesome.com/releases/v5.15.0/css/all.css");
+
 .question-heading {
     background-color: #020C16 !important;
     color: #3E4446;
     border: 2px dashed #3E4446;
 }
+
+/* .question-heading.collapsed {
+    border-bottom: 0px !important;
+} */
+
 .question-body {
     background-color: #020C16 !important;
     color: #3E4446;
     border: 2px dashed #3E4446;
+    border-top: 0;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -31,8 +38,6 @@
     border: 0px !important;
 }
   
-
-
 .accordion-button:focus {
     color: #3E4446;
     border: 2px dashed #3E4446;

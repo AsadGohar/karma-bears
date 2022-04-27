@@ -17,7 +17,7 @@ export const getAddress = async () => {
 }
 
 export const contract = new web3Instance.eth.Contract(KarmaBear.output.abi,
-    '0x369153A761d19bCa87881cD01AabD480c2ED5018')  
+    '0xb582936bee77A4c30Fa4C98C24145E6ad165f66F')  
 
 export const getPaused = async () =>  { 
     console.log(await contract.methods.paused().call())

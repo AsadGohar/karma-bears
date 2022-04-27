@@ -1,6 +1,6 @@
 import React from 'react'
 // import { ReactComponent as TimelineImg } from '../../assets/timeline.svg'
-import { ReactComponent as TimelineImgMobile } from '../../assets/timeline-mobile-5.svg'
+import { ReactComponent as TimelineImgMobile } from '../../assets/roadmap-mobile.svg'
 import { useMediaQuery } from 'react-responsive'
 import './Timeline.css'
 
@@ -23,7 +23,7 @@ const Timeline = () => {
             <TimelineImgMobile className='px-2'/>  
           </div> :
           
-          <img className='img-fluid' alt='timeline' src={'./assets/timeline.png'} />
+          <img className='img-fluid' alt='timeline' src={'./assets/roadmap.png'} />
         }
       </div> 
     </div>

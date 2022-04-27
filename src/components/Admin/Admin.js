@@ -41,7 +41,7 @@ const Admin = () => {
   const [baseURIValue,setBaseURIValue] = React.useState('')
   const [unRevealedURI,setUnRevealedURI] = React.useState('')
   const [unRevealedURIValue,setUnRevealedURIValue] = React.useState('')
-  const [totalMinted,setTotalMinted] = React.useState(false)
+  const [totalMinted,setTotalMinted] = React.useState('')
   // const [isRevealed,setIsRevealed] = React.useState(false)
 
   React.useEffect(()=>{
@@ -78,7 +78,7 @@ const Admin = () => {
     setPreSaleCost(await getPreSaleCost())
     setUnRevealedURI(await getUnRevealedURI())
     setBaseURIValue(await getBaseUri())
-    // setTotalMinted(await getTotalMinted())
+    setTotalMinted(await getTotalMinted())
   }
 
   const pauseContract = (e) => {
@@ -156,22 +156,22 @@ const Admin = () => {
               id="button-addon2">Set Unrevealed URI</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <button className="btn btn-outline-secondary btns" type="button" 
-              id="button-addon2" onClick={pauseContract} >Set Paused</button>
             <select className="form-select select-bg" id="inputGroupSelect03" 
               aria-label="Example select with button addon" value={pauseValue} onChange={e=>setPauseValue(e.target.value)} >
               <option  selected>true</option>
               <option defaultValue="1">false</option>
             </select>
+            <button className="btn btn-outline-secondary btns" type="button" 
+              id="button-addon2" onClick={pauseContract} >Set Paused</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <button className="btn btn-outline-secondary btns" type="button" 
-            id="button-addon2" onClick={revealContract}>Set Revealed</button>
             <select className="form-select select-bg" value={revealValue} onChange={e=>setRevealValue(e.target.value)} 
               id="inputGroupSelect03" aria-label="Example select with button addon">
               <option selected>true</option>
               <option defaultValue="1">false</option>
             </select>
+            <button className="btn btn-outline-secondary btns" type="button" 
+            id="button-addon2" onClick={revealContract}>Set Revealed</button>
           </div>
           <div className="input-group px-4 mb-1 text-white">
             <p className="static-data data-heading"
@@ -187,7 +187,7 @@ const Admin = () => {
         <div className='col-md-5 right-sec row'>
           <div className="input-group mb-1 text-white justify-content-between">
             <p className="static-data data-heading"
-              id="button-addon2">Total Minted : <span className='total-minted-value'>130</span></p>
+              id="button-addon2">Total Minted : <span className='total-minted-value'>{totalMinted}</span></p>
             <p className='px-2 static-data' ></p>
             <RefreshIcon className='refresh-icon' onClick={e=>{
               e.preventDefault()

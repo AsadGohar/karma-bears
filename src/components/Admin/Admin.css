@@ -1,5 +1,5 @@
 #admin {
-    height: 1000px;
+    height: 900px;
     background-color: #020C16;
 }
 
@@ -43,6 +43,10 @@
 .input-bg {
     background-color: #020C16;
     color: white;
+}
+
+input::placeholder { 
+    font-size: 13px;
 }
 
 .input-bg:focus {

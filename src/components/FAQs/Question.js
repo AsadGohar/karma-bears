@@ -1,7 +1,7 @@
 import React from 'react'
 import './Question.css'
 
-export const Question = ({id,question}) => {
+export const Question = ({id,question,answer}) => {
 
   const [isActive,setIsActive] = React.useState(false)
   let activeHeading = "accordion-button collapsed  question-heading text-white"
@@ -13,7 +13,7 @@ export const Question = ({id,question}) => {
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className={isActive ? activeHeading : unactiveHeading}
+              className={unactiveHeading}
               // className="accordion-button question-heading text-white"
               type="button"
               data-bs-toggle="collapse"
@@ -33,7 +33,7 @@ export const Question = ({id,question}) => {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              Sooooooooooooooooooooo much content in the first accordion item
+              {answer}
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 #footer {
+    /* margin-top: 20px; */
     background-color: #050713;
     padding-top: 30px;
     clip-path: polygon(0 7%, 100% 0  , 100% 100%, 0 100%);
-    /* clip-path: polygon(0 0, 100%  0, 100% 100%, 0 calc(100%-3vw)) */
-    margin-top: -20vw;
+    margin-top: -10vw;
 }
 
 .footer-heading {
@@ -58,5 +58,9 @@
 @media (max-width: 550px) { 
     .arrow-icon {
         right: -11px;
+    }
+    #footer {
+        /* margin-top: 20px; */
+        margin-top: -20vw;
     }
 }
