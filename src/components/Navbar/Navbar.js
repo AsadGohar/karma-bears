@@ -82,14 +82,14 @@ const Navbar = () => {
   return (
     <div id="nav">
       <nav className="navbar navbar-expand-lg bg">
-        <a className="ml-4 navbar-brand" href="x">
-          <KarmaLogo/>
-        </a>
-        <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
+        <NavHashLink
+          to="/"
+        ><KarmaLogo/></NavHashLink>
+        <button className="navbar-toggler toggle-btn connect-btn" type="button" data-toggle="collapse" 
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
         </button>
-        <div className="collapse navbar-collapse">
+        <div id='navbarNav' className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item pr-4 active">
               <NavHashLink
@@ -124,7 +124,6 @@ const Navbar = () => {
             <li className="nav-item pr-4">
               <NavLink
                 to="/gallery"
-                
               >GALLERY</NavLink>
             </li>
             {
@@ -132,7 +131,6 @@ const Navbar = () => {
               <li className="nav-item pr-4">
                 <NavLink
                   to="/admin"
-                  activeClassName="selected"
                 >ADMIN</NavLink>
               </li>
             }

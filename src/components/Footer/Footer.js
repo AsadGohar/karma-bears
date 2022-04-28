@@ -1,5 +1,6 @@
 import React from 'react'
 import { ReactComponent as ArrowIcon } from '../../assets/newsletter-input.svg'
+import { NavHashLink } from 'react-router-hash-link';
 import './Footer.css'
 
 const Footer = () => {
@@ -9,28 +10,34 @@ const Footer = () => {
             <div className="row row-margin-0">
                 <div className="col-md-5 mt-md-0 mt-3">
                     <img src={'../assets/karma-white-logo.png'} alt='logo' />
-                    <p className='text-white logo-sec-text' >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet
-                    </p>
                 </div>
                 <div className="col-md-3 mb-md-0 mb-3 mt-2">
                     <p className="footer-heading">Quick Links</p>
                     <ul className="list-unstyled quick-links">
                         <li>
-                            <a href="#!">Home</a>
+                            <NavHashLink
+                                to="/#home"
+                            >HOME</NavHashLink>
                         </li>
                         <li>
-                            <a href="#!">About</a>
+                            <NavHashLink
+                                to="/#home"
+                            >HOME</NavHashLink>
                         </li>
                         <li>
-                            <a href="#!">Roadmap</a>
+                            <NavHashLink
+                                to="/#roadmap"
+                            >ROADMAP</NavHashLink>
                         </li>
                         <li>
-                            <a href="#!">Team</a>
+                            <NavHashLink
+                                to="/#team"
+                            >OUR TEAM</NavHashLink>
                         </li>
                         <li>
-                            <a href="#!">FAQs</a>
+                            <NavHashLink
+                                to="/#faq"
+                            >FAQs</NavHashLink>
                         </li>
                     </ul>
                 </div>

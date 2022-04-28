@@ -21,6 +21,18 @@ const Mint = () => {
             console.log(network)
         }
         getNetwork()
+        window.addEventListener('load', function() {
+            if (typeof web3 !== 'undefined') {
+              console.log('web3 is enabled')
+              if (web3.currentProvider.isMetaMask === true) {
+                console.log('MetaMask is active')
+              } else {
+                toast.warn('MetaMask is not installed')
+              }
+            } else {
+              console.log('web3 is not found')
+            }
+        })
     },[])
     
     const getUser = async (e) => {
