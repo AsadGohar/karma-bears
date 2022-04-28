@@ -2,7 +2,7 @@
     background-color: #020C16;
     /* height: 1400px; */
     padding-top: 70px;
-    margin-bottom: -10vh;
+    padding-bottom: 70px;
 }
 
 .faq-text {
@@ -23,8 +23,21 @@
     color: #848484;
 }
 
-@media (max-width: 640px) {
+@media (min-width:551px) and (max-width: 640px) {
     .faq-sec {
         padding: 0px 40px 40px 40px;
+    }
+    #faq {
+        margin-top: -20vw;
+    }
+}
+
+@media (max-width: 550px) { 
+
+    .faq-sec {
+        padding: 0px 40px 40px 40px;
+    }
+    #faq {
+        /* margin-bottom: -20vw; */
     }
 }

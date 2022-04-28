@@ -1,6 +1,5 @@
 import React from 'react'
 import { 
-  contract,
   web3Instance,
   getPaused, 
   getPreSaleCost, 
@@ -42,6 +41,7 @@ const Admin = () => {
   const [unRevealedURI,setUnRevealedURI] = React.useState('')
   const [unRevealedURIValue,setUnRevealedURIValue] = React.useState('')
   const [totalMinted,setTotalMinted] = React.useState('')
+  const [showLoader,setShowLoader] = React.useState(true)
   // const [isRevealed,setIsRevealed] = React.useState(false)
 
   React.useEffect(()=>{
@@ -175,12 +175,12 @@ const Admin = () => {
           </div>
           <div className="input-group px-4 mb-1 text-white">
             <p className="static-data data-heading"
-              id="button-addon2">Base URI</p>
+              id="button-addon2">Base URI : </p>
             <p className='px-2 static-data' >{String(baseURIValue)}</p>
           </div>
           <div className="input-group px-4 mb-1 text-white">
           <p className="static-data data-heading"
-              id="button-addon2">UnRevealed URI</p>
+              id="button-addon2">UnRevealed URI : </p>
             <p className='px-2 static-data' >{String(unRevealedURI)}</p>
           </div>
         </div>

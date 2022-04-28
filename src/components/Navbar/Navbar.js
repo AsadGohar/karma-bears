@@ -27,7 +27,6 @@ const Navbar = () => {
   }
 
   const loginWithMetaMask = async (e) => {
-    console.log('here')
     e.preventDefault()
     const provider = await detectEthereumProvider();
     if (provider) {
@@ -91,7 +90,7 @@ const Navbar = () => {
         </button>
         <div id='navbarNav' className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item pr-4 active">
+            <li className="nav-item pr-4">
               <NavHashLink
                 to="/#home"
               >HOME</NavHashLink>

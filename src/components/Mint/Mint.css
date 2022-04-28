@@ -21,3 +21,24 @@
 .account-heading-text {
     color: #355651;
 }
+
+@media (max-width: 540px) {
+
+    .account-heading-text {
+        font-size: 20px;
+    }
+
+    .mint-opt {
+        width: 350px;
+        padding: 30px;
+        border: 2px dashed #3E4446;
+        border-radius: 5px;
+    }
+    .mint-btn {
+        width: 140px;
+    }
+
+    .address{
+        font-size: 14px;
+    }
+}

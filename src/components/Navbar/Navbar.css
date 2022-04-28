@@ -14,3 +14,11 @@ li:hover {
     background-color: #355651 !important;
     color: white;
 }
+
+@media (max-width: 540px) {
+    .nav-item {
+        text-align: center;
+        margin-block: 5px;
+    }
+}
+
