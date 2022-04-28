@@ -11,7 +11,7 @@ const About = () => {
             <AboutKarma  className='p-4 img-fluid' />
             <Bear className='p-2 bear'/>
         </div>
-        <div className='row row-margin-0 px-4 ml-4 pt-4  d-flex justify-content-around align-items-center'  >
+        <div className='row mx-0 px-4 ml-4 pt-4  d-flex justify-content-around align-items-center'  >
             <div className='col d-flex justify-content-center flex-column text-white about-text'>
                 <p>Karma Bear NFT is a collection of 10,000 digital artworks. Digitally generated with a 
                     random combination of 120hand-drawn traits, each unique bear has been designed 

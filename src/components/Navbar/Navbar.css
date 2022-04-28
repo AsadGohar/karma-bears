@@ -1,5 +1,5 @@
-#nav .bg {
-    background-color: #03050D;
+.nav-bg-cust {
+    background-color: #03050D !important;
 }
 
 li a {

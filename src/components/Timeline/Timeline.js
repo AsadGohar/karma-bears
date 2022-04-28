@@ -11,17 +11,16 @@ const Timeline = () => {
   })
 
   return (
-    <div id='roadmap'>
+    <div id='roadmap' className='mx-0'>
       <div className='d-flex justify-content-center'>
         <img alt='headind' src={'../assets/roadmap-heading.png'} />
         <p className='our-team-text'>Road<span className='karma-text' >Map</span></p>
       </div>
-      <div className='container'>
+      <div className='container-fluid'>
         {
           isMobile ? 
-          <div >
-            <TimelineImgMobile className='px-2'/>  
-          </div> :
+
+            <TimelineImgMobile className='mobile-timeline'/>   :
           
           <img className='img-fluid' alt='timeline' src={'./assets/roadmap.png'} />
         }

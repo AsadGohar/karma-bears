@@ -1,32 +1,11 @@
 #roadmap {
     background-color: #020C16;
-    /* height: 1300px; */
-    /* margin-top: -3vw; */
-    /* padding: 60px 0 20px 20px; */
+    padding-bottom: 40px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
     margin-bottom: -3vw;
 }
 
-@media (max-width:650px) {
-    #roadmap {
-        height: 2200px;
-    }
+.mobile-timeline {
+    width: 100%;
 }
 
-@media (min-width:651px) and (max-width:768px) {
-    #roadmap {
-        height: 602px;
-    }
-}
-
-@media (min-width:769px) and (max-width:991px) {
-    #roadmap {
-        height: 748px;
-    }
-}
-
-@media (min-width:992px) {
-    #roadmap {
-        height: 1100px;
-    }
-}

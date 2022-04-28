@@ -9,8 +9,8 @@ import { NavHashLink } from 'react-router-hash-link';
 import {
   NavLink
 } from "react-router-dom";
-import './Navbar.css'
 import { getAddress, getOwner } from '../../utils/contractUtils'
+import './Navbar.css'
 
 const Navbar = () => {
 
@@ -80,14 +80,14 @@ const Navbar = () => {
 
   return (
     <div id="nav">
-      <nav className="navbar navbar-expand-lg bg">
-        <NavHashLink
-          to="/"
-        ><KarmaLogo/></NavHashLink>
-        <button className="navbar-toggler toggle-btn connect-btn" type="button" data-toggle="collapse" 
+      <nav className="navbar nav-bg-cust navbar-expand-lg navbar-dark bg-dark">
+        <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
         </button>
+        <NavHashLink
+          to="/"
+        ><KarmaLogo/></NavHashLink>
         <div id='navbarNav' className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item pr-4">
