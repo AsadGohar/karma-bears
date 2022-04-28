@@ -9,7 +9,6 @@ const About = () => {
     <div id='about'>
         <div className='d-flex justify-content-center'>
             <AboutKarma  className='p-4 img-fluid' />
-            {/* <p className='what-text'>What is <span className='karma-text'>Karma Bear</span> ?</p> */}
             <Bear className='p-2 bear'/>
         </div>
         <div className='row row-margin-0 px-4 ml-4 pt-4  d-flex justify-content-around align-items-center'  >

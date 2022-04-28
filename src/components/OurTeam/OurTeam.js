@@ -15,11 +15,11 @@ const OurTeam = () => {
         <div className='mem-container pt-3' >
           <div className="member1 box-shadow-container">
             <div className=" px-0"  >
-              <img className="card-img-top" src={'./assets/mem-straight.png'} alt="Card cap"/>
+              <img className="card-img-top" src={'./assets/community-manager.png'} alt="Card cap"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
                   <h5 className="card-title mb-1 text text-white">Chad Wagner</h5>
-                  <p className=" text mb-2 text-white">CG Artist</p>
+                  <p className=" text mb-2 text-white">Community Manager</p>
                 </div>
                 <div className="d-flex icon-sec justify-content-center pb-2">
                   <div>
@@ -37,11 +37,11 @@ const OurTeam = () => {
           </div>
           <div className="member2 box-shadow-container">
             <div className="px-0"  >
-              <img className="card-img-top" src={'./assets/mem-2.png'} alt="Card cap2"/>
+              <img className="card-img-top" src={'./assets/coo.png'} alt="Card cap2"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
                   <h5 className="card-title mb-1 text text-white">Larry Young</h5>
-                  <p className=" text mb-2 text-white">UI Designer</p>
+                  <p className=" text mb-2 text-white">COO</p>
                 </div>
                 <div className="d-flex icon-sec justify-content-center pb-2">
                 <div>
@@ -60,7 +60,7 @@ const OurTeam = () => {
           <div className="box-shadow-container-3">
             <div className="member3">
               <div className="px-0"  >
-                <img className="card-img-top" src={'./assets/mem-3.png'} alt="Card cap3"/>
+                <img className="card-img-top" src={'./assets/ceo.png'} alt="Card cap3"/>
                 <div className='info-sec'>
                   <div className="card-body pb-0 pt-1 member-details-sec">
                     <h5 className="card-title mb-1 text-center text-white">Johnny Cunningham</h5>
@@ -83,7 +83,7 @@ const OurTeam = () => {
           </div>
           <div className="member4 box-shadow-container">
             <div className="px-0"  >
-              <img className="card-img-top" src={'./assets/mem-4.png'} alt="Card cap4"/>
+              <img className="card-img-top" src={'./assets/cto.png'} alt="Card cap4"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
                   <h5 className="card-title mb-1 text-center text-l text-white">Joan Williamson</h5>
@@ -105,7 +105,7 @@ const OurTeam = () => {
           </div>
           <div className="member5 box-shadow-container">
             <div className="px-0"  >
-              <img className="card-img-top" src={'./assets/mem-5.png'} alt="Card cap5"/>
+              <img className="card-img-top" src={'./assets/marketing-manager.png'} alt="Card cap5"/>
               <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 member-details-sec">
                   <h5 className="card-title mb-1 text-l text-white">Eugene Young</h5>

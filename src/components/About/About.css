@@ -11,7 +11,7 @@
 
 .about-text{
     max-width: 500px;
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
 }
 
@@ -29,13 +29,14 @@
 }
 
 .bear {
-    /* position: absolute; */
+    position: absolute;
+    /* bottom: ; */
     right: 50px;
 }
 
 .world-img {
-    width: 400px;
-    height: 330px;
+    width: 500px;
+    height: 430px;
 }
 
 @media (max-width: 440px) {
@@ -46,6 +47,14 @@
     .about-text{
         font-size: 18px;
         text-align: center;
+    }
+    .bear {
+        display: none;
+    }
+    .about-text{
+        max-width: 500px;
+        font-size: 14px;
+        text-align: left;
     }
 }
 
