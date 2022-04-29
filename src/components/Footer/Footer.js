@@ -1,67 +1,72 @@
 import React from 'react'
 import { ReactComponent as ArrowIcon } from '../../assets/newsletter-input.svg'
+import { ReactComponent as DiscordIcon } from '../../assets/discord-icon.svg'
+import { ReactComponent as InstagramIcon } from '../../assets/instagram-icon.svg'
+import { ReactComponent as TwitterIcon } from '../../assets/twitter-icon.svg'
 import { NavHashLink } from 'react-router-hash-link';
 import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer id='footer' className="page-footer font-small blue pt-4 container-fluid mx-0">
-        <div className="container-fluid row-margin-0 text-center text-md-left">
+    <footer id='footer'>
+        <div className="container-fluid d-flex justify-content-center align-items-center flex-column px-0 row-margin-0 text-center">
             <div className="row row-margin-0">
                 <div className="col-md-5 mt-md-0 mt-3">
                     <img src={'../assets/karma-white-logo.png'} alt='logo' />
                 </div>
-                <div className="col-md-3 mb-md-0 mb-3 mt-2">
-                    <p className="footer-heading">Quick Links</p>
-                    <ul className="list-unstyled quick-links">
-                        <li>
-                            <NavHashLink
-                                to="/#home"
-                            >HOME</NavHashLink>
-                        </li>
-                        <li>
-                            <NavHashLink
-                                to="/#home"
-                            >HOME</NavHashLink>
-                        </li>
-                        <li>
-                            <NavHashLink
-                                to="/#roadmap"
-                            >ROADMAP</NavHashLink>
-                        </li>
-                        <li>
-                            <NavHashLink
-                                to="/#team"
-                            >OUR TEAM</NavHashLink>
-                        </li>
-                        <li>
-                            <NavHashLink
-                                to="/#faq"
-                            >FAQs</NavHashLink>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col-md-3 mb-3 mt-2">
-                    <p className="footer-heading">Newsletter</p>
-                    <p className='text-white newsletter-text'>
-                        Signup for our newsletter to get the latest news in your inbox. 
-                        Your email is safe with us. We don't spam.
-                    </p>
-                    <div className="d-flex justify-content-center align-items-center form-sec mr-2">
-                        <input className="form-input form-control" placeholder='Email Address'  min='0' type="email"/>
-                        <ArrowIcon className='arrow-icon'/>
-                    </div>
-                    <div className='start-sec' >
-                        <img alt='x' src={'../assets/newsletter-start.png'} />
-                        <img alt='x' src={'../assets/newsletter-start.png'} />
-                        <img alt='x' src={'../assets/newsletter-start.png'} />
-                    </div>
-                </div>
+            </div>
+            <p className='grey-clr mb-4'>KARMA BEAR is a collection of 10,000, 1080x1920, computer generated art</p>
+            <div>
+                <ul className="list-unstyled quick-links d-flex">
+
+                    <li>
+                        <NavHashLink
+                            to="/#home"
+                        >HOME</NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink
+                            to="/#about"
+                        >ABOUT</NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink
+                            to="/#roadmap"
+                        >ROADMAP</NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink
+                            to="/#team"
+                        >OUR TEAM</NavHashLink>
+                    </li>
+                    <li>
+                        <NavHashLink
+                            to="/#faq"
+                        >FAQs</NavHashLink>
+                    </li>
+                </ul>
             </div>
         </div>
         <hr className='footer-hr' />
-        <div className="footer-copyright text-center py-3 text-white">Copyright © 2022 KarmaBear.
-         All Rights Reserved
+        <div className="text-center py-3 grey-clr row mx-0 footer-base">
+            <div className='col-md-4'>
+            <img className='ml-2' src={'./assets/email-icon.png'} /> karmabear@gmail.com
+            </div>
+            <div className='col-md-4'>
+                Copyright © 2022 KarmaBear. All Rights Reserved
+            </div>
+            <div className='col-md-4 d-flex justify-content-center align-items-center'>
+                Follow Us On
+                <div>
+                    <img className='ml-2' src={'./assets/footer-discord-icon.png'} /> 
+                </div>
+                <div>
+                    <img className='ml-2' src={'./assets/footer-twitter-icon.png'} />    
+                </div>
+                <div>
+                    <img className='ml-2' src={'./assets/footer-ig-icon.png'} /> 
+                </div>
+            </div>
         </div>
     </footer> 
 )}

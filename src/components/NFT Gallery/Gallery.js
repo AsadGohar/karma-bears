@@ -6,7 +6,7 @@ const Gallery = () => {
   return (
     <div id='gallery' className='container-fluid mx-0'>
         <h1 className="display-6 text-center text-white py-3">NFT GALLERY</h1>
-        <div className='row justify-content-center' >
+        <div className='row mx-0 justify-content-center' >
           <Nft/>
           <Nft/>
           <Nft/>

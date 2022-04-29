@@ -17,8 +17,20 @@ const Navbar = () => {
   const [user,setUser] = React.useState('')
   const [isOwner,setIsOwner] = React.useState(false)
 
+  const [navScroll, setNavScroll] = React.useState('navbar-wrap')
+	const [scrollLogo, setScrollLogo] = React.useState('navbar-logo ml-3')
+
   React.useEffect(()=> {
     getUser()
+    window.addEventListener("scroll", function () {
+			if (window.pageYOffset > 0) {
+				setNavScroll('scrollNavBar')
+				setScrollLogo('scrollNavLogo ml-5 mt-2')
+			} else {
+				setNavScroll('navbar-wrap')
+				setScrollLogo('navbar-logo ml-5 mt-2')
+			}
+		});
   },[])
   
   const getUser = async () => {
@@ -80,14 +92,14 @@ const Navbar = () => {
 
   return (
     <div id="nav">
-      <nav className="navbar nav-bg-cust navbar-expand-lg navbar-dark bg-dark">
+      <nav className={`navbar nav-bg-cust fixed-top ${navScroll}  navbar-expand-lg navbar-dark bg-dark`}>
         <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse" 
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
         </button>
         <NavHashLink
           to="/"
-        ><KarmaLogo/></NavHashLink>
+        ><img src={'./assets/logo.png'} className={`${scrollLogo}`}/></NavHashLink>
         <div id='navbarNav' className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item pr-4">
@@ -119,11 +131,6 @@ const Navbar = () => {
               <NavLink
                 to="/mint"
               >MINT</NavLink>
-            </li>
-            <li className="nav-item pr-4">
-              <NavLink
-                to="/gallery"
-              >GALLERY</NavLink>
             </li>
             {
               isOwner &&             

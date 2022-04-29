@@ -10,9 +10,14 @@
 }
 
 .about-text{
+    max-width: 800px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.right-sec-about {
     max-width: 500px;
-    font-size: 14px;
-    text-align: left;
+    font-size: 22px;
 }
 
 .what-text{
@@ -34,27 +39,42 @@
     right: 50px;
 }
 
-.world-img {
-    width: 500px;
-    height: 430px;
+.pic1 {
+    width: 150px;
+    height: 200px;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.pic2 {
+    width: 150px;
+    height: 200px;
+}
+.pic3 {
+    width: 150px;
+    height: 200px;
+    margin-top: 40px;
+    margin-right: 20px;
+
+}
+.pic4 {
+    width: 150px;
+    height: 200px;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 700px) {
     .world-img {
         width: 300px;
         height: 270px;
     }
     .about-text{
-        font-size: 18px;
+        font-size: 22px;
         text-align: center;
     }
     .bear {
         display: none;
     }
-    .about-text{
-        max-width: 500px;
-        font-size: 14px;
-        text-align: left;
+    .right-sec-about{
+       margin-left: 160px;
     }
 }
 

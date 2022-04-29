@@ -21,13 +21,12 @@ function App() {
   return (
     <div >
       <Router>
-        <Navbar/>
+        <Navbar/> 
         <ToastContainer />
         <Routes>
           <Route path="/" element={<LandingPage />} exact />
           <Route path="/admin" element={<Admin />} exact />
           <Route path="/mint" element={<Mint />} exact />
-          <Route path="/gallery" element={<Gallery />} exact />
         </Routes>
         <Footer/>
       </Router> 

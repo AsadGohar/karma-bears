@@ -1,5 +1,25 @@
 #home{
-    /* background-image: url('../../assets/home-bg.png'); */
-    background-color: #03050D;
-    /* height: 88vh; */
+    background-image: url('../../assets/home.png');
+    background-size:100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+}
+
+.opensea {
+    background-color: #434343 !important;
+    border: 0;
+}
+
+.subheading {
+    font-size: 14px
+}
+
+.mint {
+    background-color: #004040 !important;
+    border: 0;
+}
+
+.home-info-sec {
+    padding-top: 250px;
 }

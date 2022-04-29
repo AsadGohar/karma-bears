@@ -11,8 +11,17 @@
     color: #355651;
 }
 
+.grey-clr {
+    color: #808080;
+}
+
+.icon {
+    background-color: #6CD1C1;
+    fill: #6CD1C1;
+}
+
 .quick-links li{
-    padding-bottom: 20px;
+    margin-left: 30px;
 }
 
 .newsletter-text {
@@ -51,8 +60,11 @@
 .footer-hr{
     color: #FFFFFF;
     margin: auto;
-    width: 50%;
     border: 1px solid #FFFFFF;
+}
+
+.footer-base {
+    font-size: 14px;
 }
 
 @media (max-width: 550px) { 

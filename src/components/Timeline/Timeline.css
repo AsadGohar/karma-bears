@@ -1,11 +1,160 @@
 #roadmap {
-    background-color: #020C16;
-    padding-bottom: 40px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
-    margin-bottom: -3vw;
+  background-color: #050713;
+  padding-bottom: 50px;
 }
 
-.mobile-timeline {
-    width: 100%;
+.roadmap-title-div {
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
+#mobileView {
+  display: none;
+}
+
+.rm-mid {
+  align-content: center;
+}
+
+.circle-icon1 {
+  display: block;
+  position: absolute;
+  top: 20;
+}
+
+.circle-icon2 {
+  display: block;
+  position: absolute;
+  top: 30;
+}
+
+.circle-icon3 {
+  display: block;
+  position: absolute;
+  top: 40;
+}
+
+.circle-icon4 {
+  display: block;
+  position: absolute;
+  top: 50;
+}
+
+.circle-icon5 {
+  display: block;
+  position: absolute;
+  top: 20;
+}
+
+.line-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.roadmap-single-div {
+  border: 1px solid rgb(145, 137, 137);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#rm1 {
+  margin-top: 20px;
+}
+
+#rm2 {
+  margin-top: 300px;
+}
+
+#rm3 {
+  margin-top: 270px;
+}
+
+#rm4 {
+  margin-top: 350px;
+}
+
+#rm5 {
+  margin-top: 370px;
+}
+
+#rm6 {
+  margin-top: 240px;
+}
+
+#rm7 {
+  margin-top: 360px;
+}
+
+#rm8 {
+  margin-top: 240px;
+}
+
+.heading1 {
+  font-size: 30px;
+  color: #54A522;
+  font-family: "Audiowide", sans-serif !important;
+}
+
+.heading2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white
+}
+
+.heading3 {
+  font-size: 20px;
+  color: white;
+}
+
+.basic-text2 {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .roadmap-wrapper {
+    padding-top: 30px;
+  }
+
+  #webView {
+    display: none;
+  }
+
+  #mobileView {
+    display: flex;
+  }
+
+  .circle-icon {
+    width: 30px;
+  }
+
+  #rm2 {
+    margin-top: 40px;
+  }
+
+  #rm3 {
+    margin-top: 70px;
+  }
+
+  #rm4 {
+    margin-top: 130px;
+  }
+
+  #rm5 {
+    margin-top: 100px;
+  }
+
+  #rm6 {
+    margin-top: 100px;
+  }
+
+  #rm7 {
+    margin-top: 120px;
+  }
+  
+  #rm8 {
+    margin-top: 50px;
+  }
+}

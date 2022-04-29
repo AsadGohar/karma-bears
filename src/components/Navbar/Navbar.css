@@ -1,9 +1,28 @@
 .nav-bg-cust {
     background-color: #03050D !important;
+    color:#F3E9D2;
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    transition: background .5s;
+    transition: font-size .5s;
 }
 
 li a {
     color: #FFFFFF !important;
+}
+
+.fixed-top {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+li a:hover{
+    text-decoration: none;
+    color: #5fb3a6 !important;
 }
 
 li:hover {
@@ -13,6 +32,34 @@ li:hover {
 .connect-btn {
     background-color: #355651 !important;
     color: white;
+}
+    
+.scrollNavBar {
+    background-color:#03050D;
+    color:#F3E9D2;  
+    z-index: 10;
+    position: fixed;
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+    top: 0px;
+    transition: background 1s;
+    transition: font-size 1s;
+}
+    
+.navbar-logo{
+    width: 200px;
+    transition: width 1s;
+}
+
+.scrollNavLogo{
+    width: 140px;
+    transition: width 1s;
+}
+    
+.nav-link{
+    color: white;
+    transition: color 0.5s;
 }
 
 @media (max-width: 540px) {

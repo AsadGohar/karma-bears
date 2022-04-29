@@ -28,7 +28,8 @@ export let questionsArr = [
         5.    And follow the minting process 
         `
     }
-    ,
+]
+export let questionsArrTwo = [
     {   id:'Six',
         question : 'What is the lore of Karma Bear?',
         answer:`It is a story of a bear living multiple lives in multiple timelines. Bearing a new name in every life, he gets a revelation and earns wisdom ($WISDM). 
