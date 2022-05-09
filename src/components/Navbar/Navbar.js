@@ -1,7 +1,4 @@
 import React from 'react'
-import { ReactComponent as DiscordIcon } from '../../assets/discord-icon.svg'
-import { ReactComponent as InstagramIcon } from '../../assets/instagram-icon.svg'
-import { ReactComponent as TwitterIcon } from '../../assets/twitter-icon.svg'
 import detectEthereumProvider from '@metamask/detect-provider'
 import { toast } from 'react-toastify';
 import { NavHashLink } from 'react-router-hash-link';
@@ -81,54 +78,74 @@ const Navbar = () => {
   return (
     <div id="nav">
       <nav className={`navbar nav-bg-cust fixed-top navbar-expand-lg`}>
+        <NavHashLink
+          to="/"
+        ><img className='navbar-logo' src={'./assets/logo.png'} /></NavHashLink>
         <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse"
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>
         </button>
-        <NavHashLink
-          to="/"
-        ><img className='navbar-logo' src={'./assets/logo.png'} /></NavHashLink>
         <div id='navbarNav' className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
-            <li className="pr-4">
-              <NavHashLink className='cust-nav-link'
-                to="/#home"
-              >Home</NavHashLink>
+            <li className="pr-3">
+              <a className='cust-nav-link'
+                href="https://www.karmabear.io/"
+              >Home</a>
             </li>
-            <li className="pr-4">
-              <NavHashLink className='cust-nav-link'
-                to="/#about"
-              >About</NavHashLink>
+            <li className="pr-3">
+              <a className='cust-nav-link'
+                href="https://www.karmabear.io/#About"
+              >About</a>
             </li>
-            <li className="pr-4">
-              <NavHashLink className='cust-nav-link'
-                to="/#roadmap"
-              >Roadmap</NavHashLink>
+            <li className="pr-3">
+              <a className='cust-nav-link'
+                href="https://www.karmabear.io/#Creator"
+              >Team</a>
             </li>
-            <li className="pr-4">
-              <NavHashLink className='cust-nav-link'
-                to="/#team"
-              >Team</NavHashLink>
+            <li className="pr-3">
+              <a className='cust-nav-link'
+                href="https://www.karmabear.io/#Roadmap"
+              >Roadmap</a>
             </li>
-            <li className="pr-4">
-              <NavHashLink className='cust-nav-link'
-                to="/#faq"
-              >FAQ</NavHashLink>
+            <li className="pr-3">
+              <a className='cust-nav-link'
+                href="https://www.karmabear.io/#FAQ"
+              >FAQ</a>
             </li>
+            {
+              isOwner &&             
+              <li className="pr-4">
+                <NavLink
+                className='cust-nav-link'
+                  to="/admin"
+                >ADMIN</NavLink>
+              </li>
+            }
           </ul>
           <ul className='my-lg-0 navbar-nav ml-auto align-items-center'>
             <div className="nav-social-links">
               <a href="http://www.twitter.com/karmabearnft" className="social-link-block w-inline-block">
-                <img loading="lazy" src="https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/626efc31bbe6b8377a106701_1.png" alt="" className="social-icon" />
+                <img loading="lazy" rel="noreferrer"
+                  target="_blank" src={'./assets/twitter-icon-nav.png'} alt="" className="social-icon" />
               </a>
-              <a href="http://www.instagram.com/karmabearnft" className="social-link-block w-inline-block">
-                <img width="33" loading="lazy" src="https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/626efc652bdea197675a7eae_2.png" alt="" className="social-icon" />
+              <a href="http://www.instagram.com/karmabearnft" rel="noreferrer"
+                  target="_blank" className="social-link-block w-inline-block">
+                <img width="33" src={'./assets/ig-icon-nav.png'} alt="" className="social-icon" />
               </a>
-              <a href="https://discord.com/invite/rFYBKgwgpn" className="social-link-block w-inline-block">
-                <img width="33" loading="lazy" src="https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/626efc7608c5676e1227c837_3.png" alt="" className="social-icon" />
+              <a href="https://discord.com/invite/rFYBKgwgpn" rel="noreferrer"
+                  target="_blank" className="social-link-block w-inline-block">
+                <img width="33" loading="lazy" src={'./assets/discord-icon-nav.png'} alt="" className="social-icon" />
               </a>
             </div>
-            <div className="nav-cta-button-container"><a href="/mint" className="cust-nav-link button w-cust-nav-link" style={{ maxWidth: '1400px' }}>Connect</a></div>
+            <div className="nav-cta-button-container">
+            {
+              user.length > 0  ?
+              <h2 className="cust-nav-link button w-cust-nav-link" >{
+                user.substring(0, 6) + '...' + user.substring(user.length - 4, user.length)
+              }</h2>  :
+              <button type="submit" onClick={loginWithMetaMask} href="/mint" className="cust-nav-link button w-cust-nav-link" style={{ maxWidth: '1400px' }}>Connect</button>
+            }
+            </div>
           </ul>
         </div>
       </nav>

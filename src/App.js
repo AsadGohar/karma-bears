@@ -18,15 +18,20 @@ import './App.css';
 
 function App() {
 
+  React.useEffect(()=>{
+    window.process = {
+      ...window.process,
+    }
+  },[])
+
   return (
     <div >
       <Router>
         <Navbar/> 
         <ToastContainer />
         <Routes>
-          <Route path="/" element={<LandingPage />} exact />
+          <Route path="/" element={<Mint />} exact />
           <Route path="/admin" element={<Admin />} exact />
-          <Route path="/mint" element={<Mint />} exact />
         </Routes>
         {/* <Footer/> */}
       </Router> 

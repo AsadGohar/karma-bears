@@ -28,9 +28,6 @@
 }
 
 .cust-nav-link {
-    margin-right: 4px;
-    margin-left: 4px;
-    padding: 8px;
     -webkit-transition: background-color 200ms ease, opacity 200ms ease, color 200ms ease;
     transition: background-color 200ms ease, opacity 200ms ease, color 200ms ease;
     font-family: Glacialindifference, sans-serif;
@@ -43,6 +40,7 @@
 }
 
 .cust-nav-link:hover {
+    text-decoration: none;
     color: white;
 }
 

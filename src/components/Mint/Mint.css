@@ -102,10 +102,9 @@
     }
 
     .mint-opt {
-        width: 350px;
-        padding: 30px;
-        border: 2px dashed #3E4446;
-        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .mint-btn {
@@ -115,4 +114,26 @@
     .address{
         font-size: 14px;
     }
+
+    .mint-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    
+
+    .hero-crystal-image {
+        position: absolute;
+        left: auto;
+        top: 470px;
+        right: 37px;
+        bottom: auto;
+    }
+
+    .mint-heading {
+        font-size: 50px;
+        margin-top: 200px;
+    }
+    
 }

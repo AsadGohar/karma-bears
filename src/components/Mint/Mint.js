@@ -127,7 +127,7 @@ const Mint = () => {
 
     return (
         <div id='mint' className='container-fluid mx-0'>
-            <img src={'./assets/bear-mint.png'} sizes="(max-width: 479px) 80vw, (max-width: 1279px) 70vw, 750px" width="750" data-w-id="512b4af7-5e99-b504-aa31-7f874efbbd66" alt="" className="hero-crystal-image" />
+            <img src={'./assets/bear-mint.png'} alt="" className="hero-crystal-image" />
 
             <div className='mint-div'>
                 <h1 className="text-white pt-3 mint-heading text-center">MINT YOUR NFTs</h1>
