@@ -1,25 +1,98 @@
 #mint {
-    background-color: #050710;
-    height: 700px;
+    background-image: url('https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/626e8dc28b703cfe801cc147_Sensorium_Galay_metaverse_Prism_cd88d065ed.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 110vh;
+    max-height: none;
+    margin-top: -143px;
+    margin-bottom: 0px;
 }
 
-.mint-opt {
-    width: 500px;
-    padding: 30px;
-    border: 2px dashed #3E4446;
-    border-radius: 5px;
+.hero-crystal-image {
+    position: absolute;
+    left: auto;
+    top: 0px;
+    right: -150px;
+    bottom: auto;
+    overflow: visible;
+    width: 550px;
+    max-width: 60%;
+    margin-top: auto;
+    margin-right: 23px;
+    padding-top: 0px;
+    -o-object-fit: fill;
+    object-fit: fill;
+    will-change: transform;
+    transform: translate3d(-13.7712px, -29.9082px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
 }
+
+.mint-heading {
+    font-size: 56px;
+    margin-top: 200px;
+}
+
+.mint-div{
+    max-width: 450px;
+    padding-left: 30px;
+}
+
+.text-box {
+    position: relative;
+    max-width: 650px;
+}
+
+.text-box._450px {
+    position: relative;
+    max-width: 450px;
+}
+
+.image {
+    margin-top: 200px;
+    width: 400px;
+  }
+  
 
 .operator {
     width: 50px;
+    border-radius: 32px;
+    background-color: #fff;
+    opacity: 1;
+    -webkit-transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    color: #0f0f0f;
+    font-size: 18px;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .mint-btn {
-    width: 240px;
+    width: 200px;
+    margin-bottom: 0px;
+    border-radius: 32px;
+    background-color: #fff;
+    opacity: 1;
+    -webkit-transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease;
+    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
+    color: #0f0f0f;
+    font-size: 12px;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .account-heading-text {
-    color: #355651;
+    color: grey;
+}
+
+.address {
+    font-size: 15px;
 }
 
 @media (max-width: 540px) {
@@ -34,6 +107,7 @@
         border: 2px dashed #3E4446;
         border-radius: 5px;
     }
+
     .mint-btn {
         width: 140px;
     }

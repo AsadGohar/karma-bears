@@ -19,15 +19,11 @@ export let questionsArr = [
         answer:'The metaverse needs more Zen. And that’s why Karma bears are here. Collecting these bears will give you a voice in the Karma Bear community and help you earn $WISDM. And once the coin gets developed, it will be tied to the liquidity pool, allowing you to earn income passively.'
     }
     ,
-    {   id:'Five',
-        question : 'How can I mint Karma Bears NFT?',
-        answer:`At launch, we will do a presale of 1000 Karma Bears via whitelisting. Aft   erwards, the regular minting process will follow. The steps are given belowCreate an account on any crypto exchange of your choice
-        2.    Purchase Ethereum
-        3.    Create a Crypto Wallet and store your ETH in it
-        4.    Connect your wallet to Karma Bears website
-        5.    And follow the minting process 
-        `
+    {   id:'Seven',
+        question : 'What makes Karma Bears a great Community?',
+        answer:'The nurturing, spiritual aspect of the Karma Bear project creates a harmonious environment for growth and personal development. We will support each other in this journey of taking this Karma Bear Project from birth to the full immersive VR metaverse experience we envisioned.'
     }
+
 ]
 export let questionsArrTwo = [
     {   id:'Six',
@@ -40,10 +36,16 @@ export let questionsArrTwo = [
         `
     }
     ,
-    {   id:'Seven',
-        question : 'What makes Karma Bears a great Community?',
-        answer:'The nurturing, spiritual aspect of the Karma Bear project creates a harmonious environment for growth and personal development. We will support each other in this journey of taking this Karma Bear Project from birth to the full immersive VR metaverse experience we envisioned.'
+    {   id:'Five',
+        question : 'How can I mint Karma Bears NFT?',
+        answer:`At launch, we will do a presale of 1000 Karma Bears via whitelisting. Aft   erwards, the regular minting process will follow. The steps are given belowCreate an account on any crypto exchange of your choice
+        2.    Purchase Ethereum
+        3.    Create a Crypto Wallet and store your ETH in it
+        4.    Connect your wallet to Karma Bears website
+        5.    And follow the minting process 
+        `
     }
+
     ,
     {   id:'Eigth',
         question : 'What do I get when I own a Karma Bear?',

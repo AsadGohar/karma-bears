@@ -54,10 +54,9 @@
   margin-bottom: 5px;
 }
 
-.roadmap-single-div {
-  border: 1px solid rgb(145, 137, 137);
-  border-radius: 10px;
-  padding: 15px;
+.roadmap-single-div li {
+  margin-top: 10px;
+  list-style-image: url('../../assets/bullet-point.png');
 }
 
 #rm1 {
@@ -69,23 +68,23 @@
 }
 
 #rm3 {
-  margin-top: 270px;
+  margin-top: 300px;
 }
 
 #rm4 {
-  margin-top: 350px;
+  margin-top: 380px;
 }
 
 #rm5 {
-  margin-top: 370px;
+  margin-top: 410px;
 }
 
 #rm6 {
-  margin-top: 240px;
+  margin-top: 280px;
 }
 
 #rm7 {
-  margin-top: 360px;
+  margin-top: 400px;
 }
 
 #rm8 {
@@ -156,5 +155,67 @@
   
   #rm8 {
     margin-top: 50px;
+  }
+
+  .heading2 {
+    font-size: 16px;
+  }
+
+  .basic-text2 {
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 440px) {
+  .roadmap-wrapper {
+    padding-top: 30px;
+  }
+
+  #webView {
+    display: none;
+  }
+
+  #mobileView {
+    display: flex;
+  }
+
+  .circle-icon {
+    width: 30px;
+  }
+
+  #rm2 {
+    margin-top: 70px;
+  }
+
+  #rm3 {
+    margin-top: 180px;
+  }
+
+  #rm4 {
+    margin-top: 170px;
+  }
+
+  #rm5 {
+    margin-top: 70px;
+  }
+
+  #rm6 {
+    margin-top: 130px;
+  }
+
+  #rm7 {
+    margin-top: 130px;
+  }
+  
+  #rm8 {
+    margin-top: 80px;
+  }
+
+  .heading2 {
+    font-size: 16px;
+  }
+
+  .basic-text2 {
+    font-size: 14px;
   }
 }

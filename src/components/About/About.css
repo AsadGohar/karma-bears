@@ -10,13 +10,13 @@
 }
 
 .about-text{
-    max-width: 800px;
+    padding-top: 120px;
+    max-width: 700px;
     font-size: 20px;
-    text-align: center;
+    text-align: justify
 }
 
 .right-sec-about {
-    max-width: 500px;
     font-size: 22px;
 }
 
@@ -35,14 +35,12 @@
 
 .bear {
     position: absolute;
-    /* bottom: ; */
     right: 50px;
 }
 
 .pic1 {
     width: 150px;
     height: 200px;
-    margin-top: 40px;
     margin-right: 20px;
 }
 .pic2 {
@@ -52,7 +50,6 @@
 .pic3 {
     width: 150px;
     height: 200px;
-    margin-top: 40px;
     margin-right: 20px;
 
 }
@@ -61,20 +58,38 @@
     height: 200px;
 }
 
-@media (max-width: 700px) {
-    .world-img {
-        width: 300px;
-        height: 270px;
+
+
+@media (min-width: 768px) and (max-width:1229px) {
+    .pic1,.pic2 {
+        margin-right: 75px;
     }
+}
+
+@media (max-width: 767px) {
     .about-text{
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
     }
     .bear {
         display: none;
     }
-    .right-sec-about{
-       margin-left: 160px;
+    .pic1,.pic3 {
+        margin-top: 1.5rem;
+        margin-right: 0px;
     }
 }
 
+@media (max-width: 440px) {
+    .about-text{
+        font-size: 15px;
+        text-align: center;
+    }
+    .bear {
+        display: none;
+    }
+    .pic1,.pic3 {
+        margin-top: 1.5rem;
+        margin-right: 0px;
+    }
+}

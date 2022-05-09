@@ -28,7 +28,7 @@ function App() {
           <Route path="/admin" element={<Admin />} exact />
           <Route path="/mint" element={<Mint />} exact />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </Router> 
     </div>
   );

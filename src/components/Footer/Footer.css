@@ -76,3 +76,14 @@
         margin-top: -18vw;
     }
 }
+
+@media (max-width:440px) {
+
+    #footer-links {
+        margin-right: 20px;
+    }
+    #footer-links ul li {
+        font-size: 13px;
+    }
+
+}

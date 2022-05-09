@@ -9,16 +9,15 @@ import './Footer.css'
 const Footer = () => {
   return (
     <footer id='footer'>
-        <div className="container-fluid d-flex justify-content-center align-items-center flex-column px-0 row-margin-0 text-center">
-            <div className="row row-margin-0">
+        <div className="container-fluid mx-0 d-flex justify-content-center align-items-center flex-column px-0 row-margin-0 text-center">
+            <div className="row mx-0">
                 <div className="col-md-5 mt-md-0 mt-3">
                     <img src={'../assets/karma-white-logo.png'} alt='logo' />
                 </div>
             </div>
             <p className='grey-clr mb-4'>KARMA BEAR is a collection of 10,000, 1080x1920, computer generated art</p>
-            <div>
+            <div id='footer-links'>
                 <ul className="list-unstyled quick-links d-flex">
-
                     <li>
                         <NavHashLink
                             to="/#home"

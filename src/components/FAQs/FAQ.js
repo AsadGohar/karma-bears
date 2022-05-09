@@ -10,7 +10,7 @@ const FAQ = () => {
             <img src={'../assets/faq-heading.png'} alt='heading' />
             <p className='faq-text'>FAQs</p>
         </div>
-        <div className='faq-sec row' >
+        <div className='faq-sec row mx-0' >
           <div className='col-md-6'>
           {
             questionsArr.map(item => {
