@@ -1,8 +1,4 @@
 import React from 'react'
-import { ReactComponent as ArrowIcon } from '../../assets/newsletter-input.svg'
-import { ReactComponent as DiscordIcon } from '../../assets/discord-icon.svg'
-import { ReactComponent as InstagramIcon } from '../../assets/instagram-icon.svg'
-import { ReactComponent as TwitterIcon } from '../../assets/twitter-icon.svg'
 import { NavHashLink } from 'react-router-hash-link';
 import './Footer.css'
 
@@ -49,7 +45,7 @@ const Footer = () => {
         <hr className='footer-hr' />
         <div className="text-center py-3 grey-clr row mx-0 footer-base">
             <div className='col-md-4'>
-            <img className='ml-2' src={'./assets/email-icon.png'} /> karmabear@gmail.com
+            <img alt='email' className='ml-2' src={'./assets/email-icon.png'} /> karmabear@gmail.com
             </div>
             <div className='col-md-4'>
                 Copyright © 2022 KarmaBear. All Rights Reserved
@@ -57,13 +53,13 @@ const Footer = () => {
             <div className='col-md-4 d-flex justify-content-center align-items-center'>
                 Follow Us On
                 <div>
-                    <img className='ml-2' src={'./assets/footer-discord-icon.png'} /> 
+                    <img alt='discord' className='ml-2' src={'./assets/footer-discord-icon.png'} /> 
                 </div>
                 <div>
-                    <img className='ml-2' src={'./assets/footer-twitter-icon.png'} />    
+                    <img alt='icon' className='ml-2' src={'./assets/footer-twitter-icon.png'} />    
                 </div>
                 <div>
-                    <img className='ml-2' src={'./assets/footer-ig-icon.png'} /> 
+                    <img alt='icon' className='ml-2' src={'./assets/footer-ig-icon.png'} /> 
                 </div>
             </div>
         </div>

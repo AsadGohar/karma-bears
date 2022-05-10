@@ -2,7 +2,7 @@ import React from 'react'
 import { toast } from 'react-toastify';
 import Web3 from 'web3';
 import KarmaBear from '../../artifacts/KarmaBears.json'
-import { getAddress, isUserWhiteListed, contract } from '../../utils/contractUtils';
+import { getAddress } from '../../utils/contractUtils';
 import detectEthereumProvider from '@metamask/detect-provider'
 import { motion } from "framer-motion"
 
@@ -12,21 +12,15 @@ const Mint = () => {
 
     const [mint, setMint] = React.useState(0)
     const [user, setUser] = React.useState('')
-    const [isWhiteListed, setIsWhiteListed] = React.useState(false)
-    const [verifyDetails, setVerifyDetails] = React.useState()
-    const [network, setNetwork] = React.useState()
 
     let web3 = new Web3(Web3.givenProvider || 'https://rinkeby.infura.io/v3/8f7bb415bf7b4dceb66c27ceea3bfb64', 'web3');
 
     React.useEffect(() => {
         getUser()
-        setNetwork(getNetwork())
     }, [])
 
-    const getNetwork = async () => {
-        let network = await web3.eth.net.getId()
-        console.log(network)
-        return network
+    const getUser = async (e) => {
+        setUser(await getAddress())
     }
 
     const loginWithMetaMask = async (e) => {
@@ -79,20 +73,7 @@ const Mint = () => {
         }
     }
 
-    const getUser = async (e) => {
-        setUser(await getAddress())
-        setVerifyDetails(true)
-        if (await getAddress()) {
-            let white = await contract.methods.isAddressWhitelisted(await getAddress()).call()
-            if (!white) {
-                // toast.warn('User is Not White Listed')
-                setVerifyDetails(false)
-            } else {
-                setVerifyDetails(false)
 
-            }
-        }
-    }
     // console.log(user)
     const mintNfts = async (e) => {
         e.preventDefault()
@@ -128,16 +109,16 @@ const Mint = () => {
 
     const bounceTransition = {
         y: {
-          duration: 1,
-          yoyo: 3,
-          ease: "easeOut"
+            duration: 1,
+            yoyo: 3,
+            ease: "easeOut"
         }
     };
 
     return (
         <div id='mint' className='container-fluid mx-0'>
             <div className='mint-div'>
-                <img className='logo' src={'./assets/n-logo.png'} />
+                <img alt='logo' className='logo' src={'./assets/n-logo.png'} />
                 <motion.img
                     transition={bounceTransition}
                     // animate={{
@@ -146,21 +127,21 @@ const Mint = () => {
                     whileTap={{
                         y: ["-10%", "80%"],
                     }}
-                    className='mint-bear' 
+                    className='mint-bear'
                     src={'./assets/mint-bear.png'} />
                 <div className=''>
-                {
-                    String(user).length > 0 ?  
-                    <div className='text-center'>
-                        <div className='d-flex justify-content-between pt-1'>
-                            <button type="button" onClick ={e=>increaseMint(e)} className="btn operator">+</button>
-                            <p className='text-white mint-value mb-0'>{mint}</p>
-                            <button type="button" onClick={e=>decreaseMint(e)} className="btn operator">-</button>
-                        </div>
-                        <button type="button" onClick={e=>mintNfts(e)} className="btn mint-btn mt-1">MINT</button>
-                    </div> :
-                    <p className='text-center text-white'>MetaMask is not connected</p> 
-                }
+                    {
+                        String(user).length > 0 ?
+                            <div className='text-center'>
+                                <div className='d-flex justify-content-between pt-1'>
+                                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
+                                    <p className='text-white mint-value mb-0'>{mint}</p>
+                                    <button type="button" onClick={e => decreaseMint(e)} className="btn operator">-</button>
+                                </div>
+                                <button type="button" onClick={e => mintNfts(e)} className="btn mint-btn mt-1">MINT</button>
+                            </div> :
+                            <p className='text-center text-white'>MetaMask is not connected</p>
+                    }
                 </div>
             </div>
         </div>

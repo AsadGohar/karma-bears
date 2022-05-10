@@ -80,7 +80,7 @@ const Navbar = () => {
       <nav className='navbar nav-bg-cust fixed-top navbar-expand-lg bg-dark navbar-dark' >
         <NavHashLink
           to="/"
-        ><img className='navbar-logo' src={'./assets/logo.png'} /></NavHashLink>
+        ><img alt='logo' className='navbar-logo' src={'./assets/logo.png'} /></NavHashLink>
         <button className="navbar-toggler toggle-btn" type="button" data-toggle="collapse"
           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
           aria-label="Toggle navigation"><span className="navbar-toggler-icon "></span>

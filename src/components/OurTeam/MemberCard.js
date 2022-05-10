@@ -9,7 +9,7 @@ export const MemberCard = () => {
   return (
     <div className="ml-3 row row-margin-0 member">
         <div className=" skew px-0"  >
-            <img className="card-img-top" src={'./assets/mem-straight.png'} alt="Card image cap"/>
+            <img className="card-img-top" src={'./assets/mem-straight.png'} alt="card  cap"/>
             <div className='info-sec'>
                 <div className="card-body pb-0 pt-1 ">
                     <h5 className="card-title mb-1  text text-white">Chad Wagner</h5>
