@@ -15,14 +15,21 @@ import Admin from './components/Admin/Admin';
 import Mint from './components/Mint/Mint';
 import Gallery from './components/NFT Gallery/Gallery';
 import './App.css'; 
+import Loading from './components/Loading/Loading';
 
 function App() {
 
+  const [loading, setLoading] = React.useState(true)
+
   React.useEffect(()=>{
-    window.process = {
-      ...window.process,
-    }
+    setTimeout(() => setLoading(false), 2000)
   },[])
+
+  // if (loading) {
+  //   return (
+  //     <Loading/>
+  //   )
+  // }
 
   return (
     <div >

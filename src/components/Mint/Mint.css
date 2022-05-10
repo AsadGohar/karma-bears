@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    height: 110vh;
+    height: 111vh;
     max-height: none;
     margin-top: -143px;
     margin-bottom: 0px;
@@ -33,9 +33,24 @@
     margin-top: 200px;
 }
 
-.mint-div{
-    max-width: 450px;
-    padding-left: 30px;
+.mint-div {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 17%;
+    height: 17%;
+}
+
+.mint-bear {
+    width: 17%;
+    height: 17%;
+    padding-bottom: 20px;
+    /* transform: translateY(0%) translateZ(0px); */
 }
 
 .text-box {
@@ -51,44 +66,41 @@
 .image {
     margin-top: 200px;
     width: 400px;
-  }
+}
   
-
 .operator {
-    width: 50px;
-    border-radius: 32px;
-    background-color: #fff;
-    opacity: 1;
-    -webkit-transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    color: #0f0f0f;
+    background-color: transparent !important;
+    border:white 2px solid;
+    color: white;
     font-size: 18px;
+    text-align: center;
     font-weight: 700 !important;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+}
+  
+.operator,.mint-value:hover {
+    color: white;
+}
+
+.mint-value {
+    border: 2px white solid;
+    width: 195px;
+    color: white !important;
+    padding-top: 8px;
+    text-align: center;
+    border-radius: 3px;
 }
 
 .mint-btn {
-    width: 200px;
+    width: 300px;
     margin-bottom: 0px;
-    border-radius: 32px;
-    background-color: #fff;
     opacity: 1;
-    -webkit-transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease;
-    transition: box-shadow 200ms ease, background-color 200ms ease, transform 200ms ease, color 200ms ease, -webkit-transform 200ms ease;
-    color: #0f0f0f;
-    font-size: 12px;
-    font-weight: 700 !important;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    color: white;
+    border: 2px white solid;
+    font-size: 16px;
 }
 
 .account-heading-text {
-    color: grey;
+    color: white;
 }
 
 .address {
@@ -101,27 +113,36 @@
         font-size: 20px;
     }
 
-    .mint-opt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .mint-btn {
-        width: 140px;
+        width: 250px;
     }
 
+    .logo {
+        width: 40%;
+        height: 40%;
+    }
+    
+    .mint-bear {
+        width: 40%;
+        height: 40%;
+    }
+    
     .address{
         font-size: 14px;
     }
 
     .mint-div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 0px;
+        margin-top: 210px;
     }
-    
+
+    .mint-value {
+        border: 2px white solid;
+        width: 140px;
+        color: white !important;
+        padding-top: 8px;
+        text-align: center;
+        border-radius: 5px;
+    }
 
     .hero-crystal-image {
         position: absolute;
@@ -134,6 +155,10 @@
     .mint-heading {
         font-size: 50px;
         margin-top: 200px;
+    }
+
+    .bear {
+        padding-bottom: 20px;
     }
     
 }

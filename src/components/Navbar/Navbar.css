@@ -21,7 +21,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgba(15, 15, 15, 0.4);
+    background-color: rgba(15, 15, 15, 0.4) !important;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding: 12px 50px;
@@ -33,7 +33,7 @@
     font-family: Glacialindifference, sans-serif;
     color: gray;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     cursor: pointer;
@@ -163,5 +163,33 @@
     .nav-item {
         text-align: center;
         margin-block: 5px;
+    }
+
+    .nav-bg-cust {
+        background-color: rgba(15, 15, 15) !important;
+        padding: 12px 0px;
+    }
+
+    #navbarNav ul li {
+        text-align: center;
+        padding: 8px;
+        background-color: #222222;
+    }
+    #navbarNav ul:nth-child(2) {
+        background-color: #222222;
+        padding-bottom: 30px;
+    }
+
+    .nav-social-links{
+        display: none;
+    }
+
+    .navbar-logo {
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
     }
 }

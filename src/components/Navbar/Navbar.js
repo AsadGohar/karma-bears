@@ -77,7 +77,7 @@ const Navbar = () => {
 
   return (
     <div id="nav">
-      <nav className={`navbar nav-bg-cust fixed-top navbar-expand-lg`}>
+      <nav className='navbar nav-bg-cust fixed-top navbar-expand-lg bg-dark navbar-dark' >
         <NavHashLink
           to="/"
         ><img className='navbar-logo' src={'./assets/logo.png'} /></NavHashLink>
@@ -118,7 +118,7 @@ const Navbar = () => {
                 <NavLink
                 className='cust-nav-link'
                   to="/admin"
-                >ADMIN</NavLink>
+                >Admin</NavLink>
               </li>
             }
           </ul>

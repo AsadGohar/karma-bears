@@ -220,7 +220,7 @@ const Admin = () => {
           </div>
           <hr className='admin-mint-hr'/>
           <div className='container-fluid mx-0'>
-            <h1 className="mint-heading display-6 text-center text-white pt-1 pb-2">MINT BY ADMIN</h1>
+            <h1 className="admin-mint-heading display-6 text-center text-white pt-1 pb-2">MINT BY ADMIN</h1>
             <div className='d-flex justify-content-center'>
               <div className='d-flex flex-column admin-mint-opt align-items-center'>
                 <div>

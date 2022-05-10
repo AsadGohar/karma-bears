@@ -4,6 +4,7 @@ import Web3 from 'web3';
 import KarmaBear from '../../artifacts/KarmaBears.json'
 import { getAddress, isUserWhiteListed, contract } from '../../utils/contractUtils';
 import detectEthereumProvider from '@metamask/detect-provider'
+import { motion } from "framer-motion"
 
 import './Mint.css'
 
@@ -84,7 +85,7 @@ const Mint = () => {
         if (await getAddress()) {
             let white = await contract.methods.isAddressWhitelisted(await getAddress()).call()
             if (!white) {
-                toast.warn('User is Not White Listed')
+                // toast.warn('User is Not White Listed')
                 setVerifyDetails(false)
             } else {
                 setVerifyDetails(false)
@@ -125,24 +126,38 @@ const Mint = () => {
         }
     }
 
+    const bounceTransition = {
+        y: {
+          duration: 1,
+          yoyo: 3,
+          ease: "easeOut"
+        }
+    };
+
     return (
         <div id='mint' className='container-fluid mx-0'>
-            <img src={'./assets/bear-mint.png'} alt="" className="hero-crystal-image" />
-
             <div className='mint-div'>
-                <h1 className="text-white pt-3 mint-heading text-center">MINT YOUR NFTs</h1>
-                <div className='d-flex flex-column mint-opt'>
+                <img className='logo' src={'./assets/n-logo.png'} />
+                <motion.img
+                    transition={bounceTransition}
+                    // animate={{
+                    //     y: ["10%", "0%"],
+                    // }}
+                    whileTap={{
+                        y: ["-10%", "80%"],
+                    }}
+                    className='mint-bear' 
+                    src={'./assets/mint-bear.png'} />
+                <div className=''>
                 {
                     String(user).length > 0 ?  
                     <div className='text-center'>
-                        <h5 className='account-heading-text'>Account Address</h5>
-                        <p className='text-white address'>{user}</p>
-                        <div className='d-flex justify-content-center pt-1'>
-                            <button type="button" onClick ={e=>increaseMint(e)} className="btn mr-2 operator">+</button>
-                            <button type="button" onClick={e=>mintNfts(e)} className="button mint-btn">Mint</button>
-                            <button type="button"  onClick ={e=>decreaseMint(e)} className="btn ml-2 operator">-</button>
+                        <div className='d-flex justify-content-between pt-1'>
+                            <button type="button" onClick ={e=>increaseMint(e)} className="btn operator">+</button>
+                            <p className='text-white mint-value mb-0'>{mint}</p>
+                            <button type="button" onClick={e=>decreaseMint(e)} className="btn operator">-</button>
                         </div>
-                        <p className='text-white pt-3'>Mint Amount : {mint}</p>
+                        <button type="button" onClick={e=>mintNfts(e)} className="btn mint-btn mt-1">MINT</button>
                     </div> :
                     <p className='text-center text-white'>MetaMask is not connected</p> 
                 }
