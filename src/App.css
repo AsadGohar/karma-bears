@@ -1,28 +1,28 @@
 
 @font-face {
-  font-family: 'Glacialindifference';
-  src: url('https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/62700d8371bcef951e005c0a_GlacialIndifference-Italic.otf') format('opentype');
+  font-family: 'GlacialindifferenceItalic';
+  src: url('./assets/fonts/GlacialIndifference-Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Glacialindifference';
-  src: url('https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/62700d83332be09004ef3684_GlacialIndifference-Regular.otf') format('opentype');
+  font-family: 'GlacialindifferenceRegular';
+  src: url('./assets/fonts/GlacialIndifference-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Glacialindifference';
-  src: url('https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/62700d8394695f0765e80869_GlacialIndifference-Bold.otf') format('opentype');
+  font-family: 'GlacialindifferenceBold';
+  src: url('./assets/fonts/GlacialIndifference-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 h1,h2,h3,h4,h5,h6,p,span,button {
-  font-family:Glacialindifference ;
+  font-family:GlacialindifferenceRegular ;
 }
 
 /* .row-margin-0 {

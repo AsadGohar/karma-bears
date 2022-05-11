@@ -28,8 +28,8 @@ const Admin = () => {
 
   const [mint, setMint] = React.useState(0)
   const [user, setUser] = React.useState('')
-  const [isPaused, setIsPaused] = React.useState(false)
-  const [isRevealed, setIsRevealed] = React.useState(false)
+  const [isPaused, setIsPaused] = React.useState('')
+  const [isRevealed, setIsRevealed] = React.useState('')
   const [publicSaleCost, setPublicSaleCost] = React.useState('')
   const [preSaleCost, setPreSaleCost] = React.useState('')
   const [preSaleValue, setPreSaleValue] = React.useState('')
@@ -47,7 +47,6 @@ const Admin = () => {
   // const [isRevealed,setIsRevealed] = React.useState(false)
 
   React.useEffect(() => {
-    // console.log(await getPaused())
     getUser()
     setData()
   }, [])
@@ -73,7 +72,6 @@ const Admin = () => {
   }
 
   const setData = async () => {
-    console.log(await getPaused())
     setIsPaused(await getPaused())
     setIsRevealed(await getRevealed())
     setPublicSaleCost(await getPublicSaleCost())
@@ -122,75 +120,71 @@ const Admin = () => {
 
   return (
     <div id='admin' className='container-fluid' >
-      <h1 className="display-6 text-center text-white py-3 admin-heading">ADMIN</h1>
-      <div className='row justify-content-center'>
+      <div className='row justify-content-center pt-5'>
         <div className='col-md-7' >
           <div className="input-group mb-3 px-4">
-            <input value={whiteListAddress} onChange={e => { setWhiteListAddress(e.target.value) }} type="text" className="form-control input-bg" placeholder="Whitelist Address"
+            <input value={whiteListAddress} onChange={e => { setWhiteListAddress(e.target.value) }} type="text" className="form-control input-bg mr-2" placeholder="Whitelist Address"
               aria-label="Pre Sale Price" aria-describedby="button-addon2" />
-            <button onClick={addUserToWhiteList} className="btn btn-outline-secondary btns" type="button"
+            <button onClick={addUserToWhiteList} className="btn btns" type="button"
               id="button-addon2">Add User To Whitelist</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={baseURI} onChange={e => setBaseURI(e.target.value)} type="text" className="form-control input-bg" placeholder="Base URI"
+            <input value={baseURI} onChange={e => setBaseURI(e.target.value)} type="text" className="form-control input-bg mr-2" placeholder="Base URI"
               aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setBaseUriContract} className="btn btn-outline-secondary btns" type="button"
+            <button onClick={setBaseUriContract} className="btn btns" type="button"
               id="button-addon2">Update Base URI</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={preSaleValue} onChange={e => setPreSaleValue(e.target.value)} type="number" className="form-control input-bg" placeholder="Pre Sale Price"
+            <input value={preSaleValue} onChange={e => setPreSaleValue(e.target.value)} type="number" className="form-control input-bg mr-2" placeholder="Pre Sale Price"
               aria-label="Pre Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setPreSaleValueAdmin} className="btn btn-outline-secondary btns" type="button"
+            <button onClick={setPreSaleValueAdmin} className="btn btns" type="button"
               id="button-addon2">Set Pre Sale Price</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={publicSaleValue} onChange={e => setPublicSaleValue(e.target.value)} type="number" className="form-control input-bg" placeholder="Public Sale Price"
+            <input value={publicSaleValue} onChange={e => setPublicSaleValue(e.target.value)} type="number" className="form-control input-bg mr-2" placeholder="Public Sale Price"
               aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setPublicSaleValueAdmin} className="btn btn-outline-secondary btns" type="button"
+            <button onClick={setPublicSaleValueAdmin} className="btn btns" type="button"
               id="button-addon2">Set Public Sale Price</button>
           </div>
           <div className="input-group mb-3 px-4">
             <input onChange={e => {
               setUnRevealedURIValue(e.target.value)
-            }} value={unRevealedURIValue} type="text" className="form-control input-bg" placeholder="Unrevealed URI"
+            }} value={unRevealedURIValue} type="text" className="form-control input-bg mr-2" placeholder="Unrevealed URI"
               aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={UpdateUnRevealedURIContract} className="btn btn-outline-secondary btns" type="button"
+            <button onClick={UpdateUnRevealedURIContract} className="btn btns" type="button"
               id="button-addon2">Set Unrevealed URI</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <select className="form-select select-bg" id="inputGroupSelect03"
+            <select className="form-select select-bg mr-2" id="inputGroupSelect03"
               aria-label="Example select with button addon" value={pauseValue} onChange={e => setPauseValue(e.target.value)} >
-              <option selected>true</option>
+              <option>true</option>
               <option defaultValue="1">false</option>
             </select>
-            <button className="btn btn-outline-secondary btns" type="button"
+            <button className="btn btns" type="button"
               id="button-addon2" onClick={pauseContract} >Set Paused</button>
           </div>
           <div className="input-group mb-3 px-4">
-            <select className="form-select select-bg" value={revealValue} onChange={e => setRevealValue(e.target.value)}
+            <select className="form-select select-bg mr-2" value={revealValue} onChange={e => setRevealValue(e.target.value)}
               id="inputGroupSelect03" aria-label="Example select with button addon">
-              <option selected>true</option>
+              <option>true</option>
               <option defaultValue="1">false</option>
             </select>
-            <button className="btn btn-outline-secondary btns" type="button"
+            <button className="btn btns" type="button"
               id="button-addon2" onClick={revealContract}>Set Revealed</button>
           </div>
           {/* values */}
           <div className="input-group px-4 mb-1 text-white">
-            <p className="static-data data-heading"
-              id="button-addon2">Base URI : </p>
-            <p className='px-2 static-data' >{String(baseURIValue)}</p>
+            <ContractValue title='Base Uri' value={String(baseURIValue)} />
           </div>
           <div className="input-group px-4 mb-1 text-white">
-            <p className="static-data data-heading"
-              id="button-addon2">UnRevealed URI : </p>
-            <p className='px-2 static-data' >{String(unRevealedURI)}</p>
+            <ContractValue title='UnRevealed URI :' value={String(unRevealedURI)} />
           </div>
         </div>
         <div className='col-md-5 right-sec row'>
           <div className="input-group mb-1 text-white justify-content-between">
             <p className="static-data data-heading"
-              id="button-addon2">Total Minted : <span className='total-minted-value'>{totalMinted}</span></p>
+              id="button-addon2">Total Minted : <span className='total-minted-value'>{totalMinted}</span>
+            </p>
             <p className='px-2 static-data' ></p>
             <RefreshIcon className='refresh-icon' onClick={e => {
               e.preventDefault()
@@ -198,19 +192,13 @@ const Admin = () => {
             }} />
           </div>
           <div className="input-group mb-1 text-white">
-            <p className="static-data data-heading"
-              id="button-addon2">Revealed</p>
-            <p className='px-2 static-data' >{String(isRevealed)}</p>
+            <ContractValue title='Revealed' value={String(isRevealed)} />
           </div>
           <div className="input-group mb-1 text-white">
-            <p className="static-data data-heading"
-              id="button-addon2">Paused</p>
-            <p className='px-2 static-data' >{String(isPaused)}</p>
+            <ContractValue title='Paused' value={String(isPaused)} />
           </div>
           <div className="input-group mb-1 text-white">
-            <p className="static-data data-heading"
-              id="button-addon2">Pre Sale Cost</p>
-            <p className='px-2 static-data' >{String(preSaleCost) + ' eth'}</p>
+            <ContractValue title='Pre Sale Cost' value={String(preSaleCost)} />
           </div>
           <div className="input-group mb-1 text-white">
             <ContractValue title='Public Sale Cost' value={String(publicSaleCost)} />
@@ -222,17 +210,17 @@ const Admin = () => {
           {/* admin mint */}
           <hr className='admin-mint-hr' />
           <div className='container-fluid mx-0'>
-            <h1 className="admin-mint-heading display-6 text-center text-white pt-1 pb-2">MINT BY ADMIN</h1>
+            <h1 className="admin-mint-heading display-6 text-center text-white pt-1">MINT BY ADMIN</h1>
             <div className='d-flex justify-content-center'>
               <div className='d-flex flex-column admin-mint-opt align-items-center'>
                 <div>
                   <p className='text-white text-center mb-0 admin-mint-info'>mint by only paying gas fees</p>
-                  <div className='d-flex justify-content-center pt-4'>
-                    <button type="button" onClick={e => increaseMint(e)} className="btn btn-outline-primary mr-2 operator">+</button>
-                    <button type="button" onClick={e => mintNfts(e)} className="btn btn-outline-primary admin-mint-btn">Mint</button>
-                    <button type="button" onClick={e => decreaseMint(e)} className="btn btn-outline-primary ml-2 operator">-</button>
+                  <div className='d-flex justify-content-between pt-4'>
+                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
+                    <p className='text-white admin-mint-value mb-0'>{mint}</p>
+                    <button type="button" onClick={e => decreaseMint(e)} className="btn operator">-</button>
                   </div>
-                  <p className='text-white text-center pt-2 admin-mint-info'>Mint Amount : {mint} </p>
+                  <button type="button" onClick={e => mintNfts(e)} className="btn admin-mint-btn mt-1">MINT</button>
                 </div>
               </div>
             </div>
@@ -244,19 +232,18 @@ const Admin = () => {
 }
 
 const ContractValue = ({ title, value }) => {
-  console.log(value)
   return (
-    <div>
+    <>
       {
-        value.length > 0?
+        value.length > 0 ?
           <>
             <p className="static-data data-heading"
               id="button-addon2">{title}</p>
             <p className='px-2 static-data' >{String(value)}</p>
-          </> : 
-          <Spinner className="spinner-border-sm" animation="border" role="status"/>
-    }
-    </div>
+          </> :
+          <Spinner className="spinner-border-sm my-2" animation="border" role="status" />
+      }
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 #mint {
-    background-image: url('https://uploads-ssl.webflow.com/626e0e0bf813b1548675828a/626e8dc28b703cfe801cc147_Sensorium_Galay_metaverse_Prism_cd88d065ed.jpeg');
+    background-image: url('../../assets/mint-bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -78,7 +78,7 @@
 }
   
 .operator,.mint-value:hover {
-    color: white;
+    color: white !important;
 }
 
 .mint-value {
@@ -97,6 +97,10 @@
     color: white;
     border: 2px white solid;
     font-size: 16px;
+}
+
+.mint-btn:hover {
+    color: white;
 }
 
 .account-heading-text {
@@ -127,11 +131,11 @@
         height: 40%;
     }
     
-    .address{
+    .address {
         font-size: 14px;
     }
 
-    .mint-div{
+    .mint-div {
         margin-top: 210px;
     }
 

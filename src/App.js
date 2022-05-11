@@ -9,11 +9,9 @@ import {
   Route
 } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
-import LandingPage from './components/LandingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar'
 import Admin from './components/Admin/Admin';
 import Mint from './components/Mint/Mint';
-import Gallery from './components/NFT Gallery/Gallery';
 import './App.css'; 
 import Loading from './components/Loading/Loading';
 
@@ -22,14 +20,14 @@ function App() {
   const [loading, setLoading] = React.useState(true)
 
   React.useEffect(()=>{
-    setTimeout(() => setLoading(false), 2000)
+    setTimeout(() => setLoading(false), 4000)
   },[])
 
-  // if (loading) {
-  //   return (
-  //     <Loading/>
-  //   )
-  // }
+  if (loading) {
+    return (
+      <Loading/>
+    )
+  }
 
   return (
     <div >
@@ -40,7 +38,6 @@ function App() {
           <Route path="/" element={<Mint />} exact />
           <Route path="/admin" element={<Admin />} exact />
         </Routes>
-        {/* <Footer/> */}
       </Router> 
     </div>
   );

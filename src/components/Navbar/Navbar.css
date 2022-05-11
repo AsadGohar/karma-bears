@@ -3,23 +3,10 @@
     position: sticky;
     top: 0px;
     z-index: 200;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     background-color: rgba(15, 15, 15, 0.4) !important;
     -webkit-backdrop-filter: blur(5px);
@@ -30,7 +17,7 @@
 .cust-nav-link {
     -webkit-transition: background-color 200ms ease, opacity 200ms ease, color 200ms ease;
     transition: background-color 200ms ease, opacity 200ms ease, color 200ms ease;
-    font-family: Glacialindifference, sans-serif;
+    font-family: GlacialindifferenceRegular, sans-serif;
     color: gray;
     text-decoration: none;
     font-size: 16px;
@@ -123,24 +110,17 @@
 
 .button {
     padding: 10px 40px;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
     align-self: center;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border: 2px solid #fff;
     border-radius: 32px;
     background-color: transparent;
-    -webkit-transition: border-color 200ms ease, color 200ms ease, background-color 200ms ease;
     transition: border-color 200ms ease, color 200ms ease, background-color 200ms ease;
     color: #fff;
     font-size: 16px;
     line-height: 1.5;
     font-style: normal;
-    font-weight: 400;
+    font-family: GlacialindifferenceBold;
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
