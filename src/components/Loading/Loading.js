@@ -3,7 +3,7 @@ import './Loading.css'
 
 const Loading = () => {
   React.useEffect(()=>{
-    setTimeout(() => pageClick(), 1000)
+    setTimeout(() => pageClick(), 500)
   },[])
 
   const pageClick= ()=> {

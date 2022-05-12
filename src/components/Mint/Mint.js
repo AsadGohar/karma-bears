@@ -109,8 +109,9 @@ const Mint = () => {
 
     const bounceTransition = {
         y: {
-            duration: 1,
-            yoyo: 3,
+            duration: .4,
+            repeat: 3,
+            repeatType:'reverse',
             ease: "easeOut"
         }
     };
@@ -125,7 +126,7 @@ const Mint = () => {
                     //     y: ["10%", "0%"],
                     // }}
                     whileTap={{
-                        y: ["-10%", "80%"],
+                        y: ["-40%", "50%"],
                     }}
                     className='mint-bear'
                     src={'./assets/mint-bear.png'} />
@@ -140,7 +141,7 @@ const Mint = () => {
                                 </div>
                                 <button type="button" onClick={e => mintNfts(e)} className="btn mint-btn mt-1">MINT</button>
                             </div> :
-                            <p className='text-center text-white'>MetaMask is not connected</p>
+                            <p className='text-center text-white'>MetaMask is not Connected</p>
                     }
                 </div>
             </div>
