@@ -15,7 +15,6 @@ const Navbar = () => {
 
   React.useEffect(() => {
     getUser()
-
   }, [])
 
   const getUser = async () => {

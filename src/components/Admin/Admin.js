@@ -20,11 +20,10 @@ import {
 } from '../../utils/contractUtils'
 import { ReactComponent as RefreshIcon } from '../../assets/refresh-icon.svg'
 import Spinner from 'react-bootstrap/Spinner'
+import { toast } from 'react-toastify';
 import './Admin.css'
 
 const Admin = () => {
-
-  // let {user}  = useSelector(state=>state.user)
 
   const [mint, setMint] = React.useState(0)
   const [user, setUser] = React.useState('')
@@ -42,9 +41,6 @@ const Admin = () => {
   const [unRevealedURI, setUnRevealedURI] = React.useState('')
   const [unRevealedURIValue, setUnRevealedURIValue] = React.useState('')
   const [totalMinted, setTotalMinted] = React.useState('')
-
-  const [showLoader, setShowLoader] = React.useState(true)
-  // const [isRevealed,setIsRevealed] = React.useState(false)
 
   React.useEffect(() => {
     getUser()
@@ -93,29 +89,60 @@ const Admin = () => {
 
   const setPreSaleValueAdmin = async (e) => {
     e.preventDefault()
-    let value = web3Instance.utils.toWei(preSaleValue, 'ether')
-    setPreSaleCostContract(value, user)
+    if(preSaleValue.length === 0) {
+      toast.warn("Please Enter Presale Value")
+    }
+    else {
+      let value = web3Instance.utils.toWei(preSaleValue, 'ether')
+      setPreSaleCostContract(value, user)
+    }
   }
 
   const setPublicSaleValueAdmin = async (e) => {
     e.preventDefault()
-    let value = web3Instance.utils.toWei(publicSaleValue, 'ether')
-    setPublicSaleCostContract(value, user)
+    if(publicSaleValue.length === 0) {
+      toast.warn("Please Enter Presale Value")
+    }
+    else {
+      let value = web3Instance.utils.toWei(publicSaleValue, 'ether')
+      setPublicSaleCostContract(value, user)
+    }
   }
 
   const addUserToWhiteList = (e) => {
     e.preventDefault()
-    updateWhiteList(whiteListAddress, user)
+    if(whiteListAddress.length === 0) {
+      toast.warn("Please Enter User Address")
+    }
+    else {
+      updateWhiteList(whiteListAddress, user)
+    }
   }
 
   const setBaseUriContract = async (e) => {
     e.preventDefault()
-    setBaseUri(baseURI, user)
+    if(baseURI.length === 0) {
+      toast.warn("Please Enter Base URI")
+    }
+    else {
+      setBaseUri(baseURI, user)
+    }
   }
 
   const UpdateUnRevealedURIContract = async (e) => {
     e.preventDefault()
-    setUnRevealedURIAdmin(unRevealedURIValue, user)
+    if(baseURI.length === 0) {
+      toast.warn("Please Enter UnRevealed URI")
+    }
+    else {
+      setUnRevealedURIAdmin(unRevealedURIValue, user)
+    }
+  }
+
+  if (user.length === 0) {
+    return (
+      <div id='admin' className='container-fluid' ></div>
+    )
   }
 
   return (
@@ -123,36 +150,49 @@ const Admin = () => {
       <div className='row justify-content-center pt-5'>
         <div className='col-md-7' >
           <div className="input-group mb-3 px-4">
-            <input value={whiteListAddress} onChange={e => { setWhiteListAddress(e.target.value) }} type="text" className="form-control input-bg mr-2" placeholder="Whitelist Address"
-              aria-label="Pre Sale Price" aria-describedby="button-addon2" />
-            <button onClick={addUserToWhiteList} className="btn btns" type="button"
-              id="button-addon2">Add User To Whitelist</button>
+            <ContractInput 
+              value={whiteListAddress}
+              placeholder='White List Address' 
+              setValue={setWhiteListAddress} 
+              onClick={addUserToWhiteList}
+              text='Add User To Whitelist'
+            />
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={baseURI} onChange={e => setBaseURI(e.target.value)} type="text" className="form-control input-bg mr-2" placeholder="Base URI"
-              aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setBaseUriContract} className="btn btns" type="button"
-              id="button-addon2">Update Base URI</button>
+            <ContractInput 
+              value={baseURI} 
+              setValue={setBaseURI}
+              placeholder='Base URI' 
+              onClick={setBaseUriContract}
+              text='Update Base URI'
+            />
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={preSaleValue} onChange={e => setPreSaleValue(e.target.value)} type="number" className="form-control input-bg mr-2" placeholder="Pre Sale Price"
-              aria-label="Pre Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setPreSaleValueAdmin} className="btn btns" type="button"
-              id="button-addon2">Set Pre Sale Price</button>
+            <ContractInput 
+              value={preSaleValue}
+              placeholder='Pre Sale Value' 
+              setValue={setPreSaleValue} 
+              onClick={setPreSaleValueAdmin}
+              text='Set Pre Sale Price'
+            />
           </div>
           <div className="input-group mb-3 px-4">
-            <input value={publicSaleValue} onChange={e => setPublicSaleValue(e.target.value)} type="number" className="form-control input-bg mr-2" placeholder="Public Sale Price"
-              aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={setPublicSaleValueAdmin} className="btn btns" type="button"
-              id="button-addon2">Set Public Sale Price</button>
+            <ContractInput 
+              value={publicSaleValue} 
+              setValue={setPublicSaleValue}
+              placeholder='Public Sale Value' 
+              onClick={setPublicSaleValueAdmin}
+              text='Set Public Sale Price'
+            />
           </div>
           <div className="input-group mb-3 px-4">
-            <input onChange={e => {
-              setUnRevealedURIValue(e.target.value)
-            }} value={unRevealedURIValue} type="text" className="form-control input-bg mr-2" placeholder="Unrevealed URI"
-              aria-label="Public Sale Price" aria-describedby="button-addon2" />
-            <button onClick={UpdateUnRevealedURIContract} className="btn btns" type="button"
-              id="button-addon2">Set Unrevealed URI</button>
+            <ContractInput 
+              value={unRevealedURIValue}
+              placeholder='UnRevealed URI' 
+              setValue={setUnRevealedURIValue} 
+              onClick={UpdateUnRevealedURIContract}
+              text='Set Unrevealed URI'
+            />
           </div>
           <div className="input-group mb-3 px-4">
             <select className="form-select select-bg mr-2" id="inputGroupSelect03"
@@ -243,6 +283,17 @@ const ContractValue = ({ title, value }) => {
           </> :
           <Spinner className="spinner-border-sm my-2" animation="border" role="status" />
       }
+    </>
+  )
+}
+
+const ContractInput = ({ value, setValue , text, onClick, placeholder }) => {
+  return (
+    <>
+      <input value={value} onChange={e => { setValue(e.target.value) }} type="text" className="form-control input-bg mr-2" placeholder={placeholder}
+        aria-label="Pre Sale Price" aria-describedby="button-addon2" />
+      <button onClick={onClick} className="btn btns" type="button"
+        id="button-addon2">{text}</button>
     </>
   )
 }
