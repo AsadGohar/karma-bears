@@ -135,13 +135,16 @@ const Mint = () => {
                         String(user).length > 0 ?
                             <div className='text-center'>
                                 <div className='d-flex justify-content-between pt-1'>
-                                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
-                                    <p className='text-white mint-value mb-0'>{mint}</p>
                                     <button type="button" onClick={e => decreaseMint(e)} className="btn operator">-</button>
+                                    <p className='text-white mint-value mb-0'>{mint}</p>
+                                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
                                 </div>
                                 <button type="button" onClick={e => mintNfts(e)} className="btn mint-btn mt-1">MINT</button>
                             </div> :
-                            <p className='text-center text-white'>MetaMask is not Connected</p>
+                            <div className='d-flex justify-content-center flex-column'>
+                                <p className='text-center text-white'>MetaMask is not Connected</p>
+                                <button type="submit" onClick={loginWithMetaMask} href="/mint" className="cust-nav-link button w-cust-nav-link" style={{ maxWidth: '1400px' }}>Connect</button>
+                            </div>
                     }
                 </div>
             </div>
