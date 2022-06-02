@@ -16,7 +16,8 @@ import {
   getAddress,
   getUnRevealedURI,
   getBaseUri,
-  setUnRevealedURIAdmin
+  setUnRevealedURIAdmin,
+  giveAwayNFT
 } from '../../utils/contractUtils'
 import { ReactComponent as RefreshIcon } from '../../assets/refresh-icon.svg'
 import Spinner from 'react-bootstrap/Spinner'
@@ -40,6 +41,7 @@ const Admin = () => {
   const [baseURIValue, setBaseURIValue] = React.useState('')
   const [unRevealedURI, setUnRevealedURI] = React.useState('')
   const [unRevealedURIValue, setUnRevealedURIValue] = React.useState('')
+  const [giveAwayAddress ,setGiveAwayAddress] = React.useState('')
   const [totalMinted, setTotalMinted] = React.useState('')
 
   React.useEffect(() => {
@@ -139,6 +141,16 @@ const Admin = () => {
     }
   }
 
+  const giveAway = async (e) => {
+    e.preventDefault()
+    if(giveAwayAddress.length === 0) {
+      toast.warn("Please Enter Give Away Address")
+    }
+    else {
+      giveAwayNFT(giveAwayAddress,user)
+    }
+  }
+
   if (user.length === 0) {
     return (
       <div id='admin' className='container-fluid' ></div>
@@ -192,6 +204,15 @@ const Admin = () => {
               setValue={setUnRevealedURIValue} 
               onClick={UpdateUnRevealedURIContract}
               text='Set Unrevealed URI'
+            />
+          </div>
+          <div className="input-group mb-3 px-4">
+            <ContractInput 
+              value={giveAwayAddress}
+              placeholder='Enter Giveaway Address' 
+              setValue={setGiveAwayAddress} 
+              onClick={giveAway}
+              text='Give Away Nft'
             />
           </div>
           <div className="input-group mb-3 px-4">
@@ -284,7 +305,7 @@ const ContractValue = ({ title, value }) => {
           <Spinner className="spinner-border-sm my-2" animation="border" role="status" />
       }
     </>
-  )
+  ) 
 }
 
 const ContractInput = ({ value, setValue , text, onClick, placeholder }) => {

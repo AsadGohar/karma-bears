@@ -15,7 +15,7 @@ export const getAddress = async () => {
 }
 
 export const contract = new web3Instance.eth.Contract(KarmaBear.output.abi,
-    '0xb582936bee77A4c30Fa4C98C24145E6ad165f66F')  
+    '0x444f71f126fa73affe2aa7a280404381cf32c222')  
 
 export const getPaused = async () =>  { 
     return await contract.methods.paused().call()
@@ -38,7 +38,8 @@ export const getPreSaleCost = async () =>  {
 }
 
 export const getTotalMinted = async () =>  { 
-    return await contract.methods.totalMinted().call()
+    console.log(await contract.methods.totalMinted().call())
+    return Number(await contract.methods.totalMinted().call())
 }
 
 export const setPauseContract = async (value,address) =>  { 
@@ -111,6 +112,15 @@ export const setUnRevealedURIAdmin = async (uri,address) =>  {
 
 export const getUnRevealedURI = async () =>  { 
     return await contract.methods.notRevealedUri().call()
+}
+
+export const giveAwayNFT = async (giveAwayAddress,adminAddress) =>  {
+    console.log(giveAwayAddress,adminAddress) 
+    return await contract.methods.giveAway(giveAwayAddress).send({from:adminAddress,value:''},(err)=>{
+        if(err !== undefined){
+            console.log(err,'err')
+        }
+    })
 }
 
 export const isUserWhiteListed = async (address) =>  { 

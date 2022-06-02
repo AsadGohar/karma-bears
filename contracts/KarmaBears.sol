@@ -3,6 +3,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import './ERC721A.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
+import '@openzeppelin/contracts/utils/Strings.sol';
 
 contract KarmaBears is ERC721A, Ownable {
 
@@ -11,10 +12,10 @@ contract KarmaBears is ERC721A, Ownable {
     mapping(address=>bool) public whiteListAddresses;
     mapping(address=>uint256) public mintCountByAddress;
 
-    uint256 public preSaleCost = 0.06 ether;
-    uint256 public publicSaleCost = 0.08 ether;
+    uint256 public preSaleCost = 0.006 ether;
+    uint256 public publicSaleCost = 0.008 ether;
 
-    string public baseURI;
+    string public baseURI = "https://gateway.pinata.cloud/ipfs/QmTDsVGjC6SATGhRieAF9EqZ8V6RdhApANWAbBTDNetNH2/";
 
     bool public paused = false;
     bool public revealed = false;
@@ -23,7 +24,7 @@ contract KarmaBears is ERC721A, Ownable {
 
     constructor() ERC721A('Karma Bears','KBR') {
         setNotRevealedURI(
-            "path"
+            "https://gateway.pinata.cloud/ipfs/Qmd2Qi4i5Mfw5Ne65dnzLwehcMhCihBMHxCyAQjUGLoL39"
         );
     }
 
@@ -42,10 +43,14 @@ contract KarmaBears is ERC721A, Ownable {
        return whiteListAddresses[_user];
     }
 
+    function totalMinted() public view returns (uint256) {
+        return _totalMinted();
+    }
+
     function preSaleMint(
         uint256 quantity
     ) public payable {
-        require(!paused, "The contract is paused!");
+        require(!paused, "Contract is paused!");
         require(isAddressWhitelisted(msg.sender), "User Is Not Whitelisted");
         require(msg.value == preSaleCost*quantity, "Value is Not Correct");
         _safeMint(msg.sender, quantity);
@@ -55,20 +60,19 @@ contract KarmaBears is ERC721A, Ownable {
     function publicSaleMint(
         uint256 quantity
     ) public payable {
-        require(!paused, "The contract is paused!");
+        require(!paused, "Contract is paused!");
         require(msg.value == publicSaleCost*quantity, "Value is Not Correct");
         _safeMint(msg.sender, quantity);
         setMintCount(msg.sender,quantity);
     }
     
-    function adminMint(uint256 quantity) public onlyOwner {
+    function adminMint(uint256 quantity) public payable onlyOwner {
         require(!paused, "Contract is paused");
         _safeMint(msg.sender, quantity);
     }
 
-    function mintById(uint256 tokenId) public payable {
-        require(!paused, "Contract is paused");
-        _mintById(msg.sender, 1, true, tokenId,'');
+     function giveAway(address winnerAddress) public payable onlyOwner {
+        _safeMint(winnerAddress, 1);
     }
 
     function removeWhitelistUser(address _user) public onlyOwner {

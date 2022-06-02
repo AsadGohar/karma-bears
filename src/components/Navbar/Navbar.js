@@ -111,11 +111,17 @@ const Navbar = () => {
                 href="https://www.karmabear.io/#FAQ"
               >FAQ</a>
             </li>
+            <li className="pr-3">
+              <NavLink
+                className='cust-nav-link'
+                to="/gallery"
+              >Gallery</NavLink>
+            </li>
             {
-              isOwner &&             
+              isOwner &&
               <li className="pr-4">
                 <NavLink
-                className='cust-nav-link'
+                  className='cust-nav-link'
                   to="/admin"
                 >Admin</NavLink>
               </li>
@@ -128,22 +134,22 @@ const Navbar = () => {
                   target="_blank" src={'./assets/twitter-icon-nav.png'} alt="" className="social-icon" />
               </a>
               <a href="http://www.instagram.com/karmabearnft" rel="noreferrer"
-                  target="_blank" className="social-link-block w-inline-block">
+                target="_blank" className="social-link-block w-inline-block">
                 <img width="33" src={'./assets/ig-icon-nav.png'} alt="" className="social-icon" />
               </a>
               <a href="https://discord.com/invite/rFYBKgwgpn" rel="noreferrer"
-                  target="_blank" className="social-link-block w-inline-block">
+                target="_blank" className="social-link-block w-inline-block">
                 <img width="33" loading="lazy" src={'./assets/discord-icon-nav.png'} alt="" className="social-icon" />
               </a>
             </div>
             <div className="nav-cta-button-container">
-            {
-              user.length > 0  ?
-              <h2 className="cust-nav-link button w-cust-nav-link" >{
-                user.substring(0, 6) + '...' + user.substring(user.length - 4, user.length)
-              }</h2>  :
-              <button type="submit" onClick={loginWithMetaMask} href="/mint" className="cust-nav-link button w-cust-nav-link" style={{ maxWidth: '1400px' }}>Connect</button>
-            }
+              {
+                user.length > 0 ?
+                  <h2 className="cust-nav-link button w-cust-nav-link" >{
+                    user.substring(0, 6) + '...' + user.substring(user.length - 4, user.length)
+                  }</h2> :
+                  <button type="submit" onClick={loginWithMetaMask} href="/mint" className="cust-nav-link button w-cust-nav-link" style={{ maxWidth: '1400px' }}>Connect</button>
+              }
             </div>
           </ul>
         </div>

@@ -14,6 +14,7 @@ import Admin from './components/Admin/Admin';
 import Mint from './components/Mint/Mint';
 import './App.css'; 
 import Loading from './components/Loading/Loading';
+import Gallery from './components/NFT Gallery/Gallery';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Mint />} exact />
           <Route path="/admin" element={<Admin />} exact />
+          <Route path="/gallery" element={<Gallery/>} exact />
         </Routes>
       </Router> 
     </div>

@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    height: 111vh;
+    height: 120vh;
     max-height: none;
     margin-top: -143px;
     padding-top: 143px;
@@ -43,7 +43,8 @@
 }
 
 .admin-mint-btn:hover {
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .refresh-icon:hover {
