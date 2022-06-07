@@ -277,9 +277,9 @@ const Admin = () => {
                 <div>
                   <p className='text-white text-center mb-0 admin-mint-info'>mint by only paying gas fees</p>
                   <div className='d-flex justify-content-between pt-4'>
-                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
-                    <p className='text-white admin-mint-value mb-0'>{mint}</p>
                     <button type="button" onClick={e => decreaseMint(e)} className="btn operator">-</button>
+                    <p className='text-white admin-mint-value mb-0'>{mint}</p>
+                    <button type="button" onClick={e => increaseMint(e)} className="btn operator">+</button>
                   </div>
                   <button type="button" onClick={e => mintNfts(e)} className="btn admin-mint-btn mt-1">MINT</button>
                 </div>
