@@ -218,8 +218,8 @@ const Admin = () => {
           <div className="input-group mb-3 px-4">
             <select className="form-select select-bg mr-2" id="inputGroupSelect03"
               aria-label="Example select with button addon" value={pauseValue} onChange={e => setPauseValue(e.target.value)} >
-              <option>true</option>
-              <option defaultValue="1">false</option>
+              <option value={'true'} >true</option>
+              <option value={"false"} defaultValue="1">false</option>
             </select>
             <button className="btn btns" type="button"
               id="button-addon2" onClick={pauseContract} >Set Paused</button>
@@ -227,8 +227,8 @@ const Admin = () => {
           <div className="input-group mb-3 px-4">
             <select className="form-select select-bg mr-2" value={revealValue} onChange={e => setRevealValue(e.target.value)}
               id="inputGroupSelect03" aria-label="Example select with button addon">
-              <option>true</option>
-              <option defaultValue="1">false</option>
+              <option value={"true"} >true</option>
+              <option value={"false"}  defaultValue="1">false</option>
             </select>
             <button className="btn btns" type="button"
               id="button-addon2" onClick={revealContract}>Set Revealed</button>
